@@ -1,5 +1,6 @@
 import { verifyEmail } from './regestration_email.js';
-export { highlightEmailError };
+import { renderDefault,GotonextStep} from './registration-ui.js';
+export { highlightEmailError, backButton,passwordContainer,registerButton,identityContainer,nextButton,notification,userInfo,identify };
 const userInfo = {
   userName:'no_name',
   userEmail:"no_email",
@@ -23,22 +24,9 @@ const eErrormsg = document.querySelector(".E-message");
 const registerButton = document.querySelector(".register-button");
 const nextButton = document.querySelector('.next-button');
 const backButton = document.querySelector(".back-button");
-//console.log(nextButton, backButton);
-//console.log(notification);
-// states managers
 
 let identify = "isNotIdentify";
 let create = "isNotCreated";
-//console.log(identityContainer, passwordContainer,transition,registerButton);
-
-function renderDefault() {
-  backButton.style.display = "none";
-passwordContainer.style.display = "none";
-  registerButton.style.display = "none";  
-  identityContainer.style.display = "flex";
-  nextButton.style.display = "inline-block";
-  notification.style.display = "none";
-}
 renderDefault();
 nextButton.addEventListener("click", () => {
   let verified = verifyEmail(userEmail.value);
@@ -50,33 +38,17 @@ nextButton.addEventListener("click", () => {
   }
   else {
     identify = "isNotIdentify";
+    setTimeout(() => {
+  eErrormsg.style.display = "none";
+}),
+  3000
   }
+   eErrormsg.style.display = "inline-block";
   GotonextStep();
 });
 backButton.addEventListener("click",()=> {
   renderDefault();
 });
-
-function GotonextStep() {
-  if (identify === "identified") {
-    nextButton.style.display = "none";
-    backButton.style.display = "inline-block";
-    identityContainer.style.display = "none";
-    passwordContainer.style.display = "flex";
-    registerButton.style.display = "inline-block";
-    userInfo.userName = userName.value;
-    userInfo.userEmail = userEmail.value;
-  }
-  else {
-    //alert("please enter your name and email address ")
-    notification.style.display = "flex";
-    notification.innerHTML = "please enter your name and email address";
-    setTimeout(() => {
-      notification.style.display = "none";
-    }, 3000);
-  }
-}
-
 let isInputEmpty = false;
 registerButton.addEventListener("click", () => {
   isInputEmpty = !createPassword.value || !confirmPassword.value;
@@ -107,13 +79,11 @@ function highlightEmailError(count,relatedpos,atbound,dotbound) {
   const errorLogs = {
     count,relatedpos,atbound,dotbound
   }
-  //console.log(count, relatedpos, atbound, dotbound);
   let text = '';
   count === false? text += ` (${emailErrormsg.count})`: eErrormsg.innerText = "";
    relatedpos === false? text += ` ( ${ emailErrormsg.relatedpos })` : eErrormsg.innerText = "";
   atbound === false ? text += ` (${emailErrormsg.atbound})` : eErrormsg.innerText = "";
   dotbound === false ? text += `( ${emailErrormsg.dotbound})` : eErrormsg.innerText = "";
-  //console.log(text);
   eErrormsg.innerText = text;
 }
 
