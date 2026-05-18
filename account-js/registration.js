@@ -93,13 +93,3 @@ const emailErrormsg = {
   atbound: "make it in the format of 'text@text' ",
   dotbound:"the format of 'text.text'"
 }
-
-
-
-
-
-
-
-
-
-
