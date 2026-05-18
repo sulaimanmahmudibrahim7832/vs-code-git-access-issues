@@ -77,9 +77,7 @@ function GotonextStep() {
 let isInputEmpty = false;
 registerButton.addEventListener("click", () => {
   isInputEmpty = !createPassword.value || !confirmPassword.value;
-  //console.log(isEmpty);
-  if (isEmpty) {
-    //alert(" input must not be empty try again  ");
+  if (isInputEmpty) {
      notification.style.display = "flex";
  notification.innerHTML = "input must not be empty try again";
  setTimeout(() => {
@@ -89,7 +87,7 @@ registerButton.addEventListener("click", () => {
     if ((createPassword.value === confirmPassword.value)) {
       userInfo.password = confirmPassword.value;
       document.body.innerHTML = " account was succesfully created loading to dashboard ";
-      //console.log(userInfo);
+      
     }
     else {
       //alert("create and confirm must be the same try again");
@@ -103,19 +101,24 @@ registerButton.addEventListener("click", () => {
 });
 
 function highlightEmailError(count,relatedpos,atbound,dotbound) {
-  //console.log(count, relatedpos, atbound, dotbound);
   const errorLogs = {
     count,relatedpos,atbound,dotbound
   }
-  
-
+  //console.log(count, relatedpos, atbound, dotbound);
+  let text = '';
+  count === false? text += ` (${emailErrormsg.count})`: eErrormsg.innerText = "";
+   relatedpos === false? text += ` ( ${ emailErrormsg.relatedpos })` : eErrormsg.innerText = "";
+  atbound === false ? text += ` (${emailErrormsg.atbound})` : eErrormsg.innerText = "";
+  dotbound === false ? text += `( ${emailErrormsg.dotbound})` : eErrormsg.innerText = "";
+  //console.log(text);
+  eErrormsg.innerText = text;
 }
 
 const emailErrormsg = {
   count: "please remove extra @ and leave only one at",
   relatedpos: "@ must come first then . ",
   atbound: "make it in the format of 'text@text' ",
-  dotbound:"make it in the format of 'text.text'"
+  dotbound:"the format of 'text.text'"
 }
 
 
