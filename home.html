@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      font-family:Arial;
+    }
+    span{
+      text-decoration: underline;
+      color:blue;
+    }
+    span:hover{
+      color:blueviolet;
+      cursor:pointer;
+    }
+    span:active{
+      color:blue;
+      font-weight:700;
+    }
+  </style>
+  <title>Quzze Home Page </title>
+</head>
+<body>
+  <h1>Arewa Tutor Quzze </h1>
+  <h2>Welcome User </h2>
+  <h3>To start the quizze you need to either signup or login </h3>
+  <p>
+    to sign up <span class="signup_page">Signup</span>
+    <br>
+    to login <span class="login_page">Login</span>
+  </p>
+  <!--signup form -->
+  <div class="sign_up_container">
+    <div class="user_main_details">
+      <div class="name_container">
+    <input class="first_name" type="text" placeholder="Enter your first name ">
+      <input class="middle_name"type="text" placeholder="Enter your other name ">
+       <input class="surname" type="text" placeholder="Enter your surname ">
+     </div>
+     <div class="user_data_container">
+      <input type="email" placeholder="Enter your Email">
+      <input type="number" placeholder="please Enter your phone ">
+      <input type="password" placeholder="create a  strong password ">
+      <input type="password" placeholder="comfirm a password ">
+      <br>
+      <label>Upload your picture <input type="file" > </label>
+     </div>
+     <div class="user_setup_container">
+      <input type="password" placeholder="Verify phone">
+      <input type="password" placeholder="verify email">
+      <button>Generate Registration Number (RegN) </button>
+      <button>
+        Generate User name 
+      </button>
+      <button>
+        home 
+      </button>
+     </div>
+    </div>
+  </div>
+
+  <!--login form -->
+  <div class="Login_container">
+<div class="user_main_container">
+<input type="text" placeholder="User name "> 
+<input type="text" placeholder="RegNumber">
+</div>
+<div class="user_password_container">
+<input type="password" placeholder="Password">
+<button>
+  login
+</button>
+</div>
+  </div>
+  <script>
+  const signupLink = document.querySelector(".signup_page");
+  const loginLink = document.querySelector(".login_page");
+  const signupContainer = document.querySelector(".sign_up_container");
+  const loginContainer = document.querySelector(".Login_container");
+  signupContainer.style.display = "flex";
+  loginContainer.style.display = "flex";
+  </script>
+</body>
+</html>

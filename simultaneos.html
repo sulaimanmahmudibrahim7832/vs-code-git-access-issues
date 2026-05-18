@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simultaneous </title>
+  <style>
+    *{
+      align-items: center;
+      padding:0;
+      margin:0;
+    }
+    html,body{
+      align-items: center;
+    }
+    body{
+      padding:10px;
+    }
+    .constants-container{
+      display:flex;
+      flex-direction: column;
+      column-gap: 20px;
+      row-gap: 30px;
+    }
+    .constants-container input{
+      width:35px;
+    }
+  </style>
+</head>
+<body>
+  <h4>
+    ax+by = c (1)<br>
+    dx + ey = f (2)
+  </h4>
+  <div class="constants-container">
+<div>
+  <input placeholder="a =">x + <input  placeholder="b = ">y = <input placeholder="c = ">
+</div>
+<div>
+   <input placeholder="d =">x + <input placeholder="e = ">y = <input 
+placeholder="f = ">
+</div>
+<div>
+  <button>Solve </button>
+  <button>solution</button>
+  <button>History </button>
+</div>
+  </div>
+  <!--
+   <script>
+   const inputs = document.querySelectorAll("input");
+   inputs.forEach((input)=>{
+       
+   })
+ </script>
+  -->
+ <script>
+  //console.log(/[^\w]/.test("12cdxdvfc"));
+  //console.log(/^[\s]@/.test("as"));
+  let space = /[\s+]/;
+  let m_art = /[@+]/ 
+  console.log(space.test(""));
+  console.log(m_art.test(""));
+  
+ </script>
+</body>
+</html>
