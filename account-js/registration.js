@@ -42,6 +42,9 @@ passwordContainer.style.display = "none";
 renderDefault();
 nextButton.addEventListener("click", () => {
   let verified = verifyEmail(userEmail.value);
+  if (verified) {
+    eErrormsg.innerText = "successfully validated";
+  }
   if (userName.value != '' && verified) {
     identify = "identified";
   }
