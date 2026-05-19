@@ -1,5 +1,5 @@
 export { renderDefault ,GotonextStep};
-  import { backButton,passwordContainer,registerButton,identityContainer,nextButton,notification,userInfo,identify } from "./registration.js";
+  import { backButton,passwordContainer,registerButton,identityContainer,nextButton,notification,userInfo,identify ,userName,userEmail} from "./registration.js";
 function renderDefault() {
   backButton.style.display = "none";
 passwordContainer.style.display = "none";

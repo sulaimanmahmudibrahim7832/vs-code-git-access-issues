@@ -1,6 +1,9 @@
 import { verifyEmail } from './regestration_email.js';
-import { renderDefault,GotonextStep} from './registration-ui.js';
-export { highlightEmailError, backButton,passwordContainer,registerButton,identityContainer,nextButton,notification,userInfo,identify };
+import { renderDefault, GotonextStep } from './registration-ui.js';
+import { verifyPassword} from './registration-password.js';
+export { highlightEmailError, backButton, passwordContainer, registerButton, identityContainer, nextButton, notification, userInfo, identify, userName, userEmail };
+  
+verifyPassword("su1233sdfs");
 const userInfo = {
   userName:'no_name',
   userEmail:"no_email",
