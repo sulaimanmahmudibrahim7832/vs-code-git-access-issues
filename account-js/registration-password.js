@@ -4,13 +4,18 @@ function verifyPassword(password) {
   // is contain character and numbers;
   //has upperCase;
   let isLength = false;
-  let isContainChar = false;
+  let hasDigit = false;
   let hasUpper = false;
 
-  //isLength = verifyLength();
-  isLength = verifyLength(password);
-  console.log(isLength);
-  //verifyIsContChar(password);
+  isLength = verifyLength(password); 
+  hasUpper = verifyUpper(password);
+  hasDigit = verifyDigitFound(password);
+  if(isLength && hasUpper && hasDigit){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 function verifyLength(password,isLength) {
   if (password.length >= 8) {
@@ -21,7 +26,31 @@ function verifyLength(password,isLength) {
   }
   return isLength;
 }
-function verifyIsContChar(password) {
-  
-  
+function verifyUpper(password) {
+   let hasUpper;
+  let ch;
+  for (ch of password) {
+    if ((ch === ch.toUpperCase()) && !(ch >= 0 && ch <= 9)) {
+      hasUpper = true;
+      break;
+    }
+    else {
+      hasUpper = false;
+    }
+  }
+  return hasUpper;
+}
+function verifyDigitFound(password) {
+  let hasDigit;
+  let ch;
+  for (ch of password) {
+    if (ch >= 0 && ch <= 9) {
+      hasDigit = true;
+      break;
+    }
+    else {
+      hasDigit = false;
+    }
+  }
+  return hasDigit;
 }

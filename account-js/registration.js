@@ -3,7 +3,7 @@ import { renderDefault, GotonextStep } from './registration-ui.js';
 import { verifyPassword} from './registration-password.js';
 export { highlightEmailError, backButton, passwordContainer, registerButton, identityContainer, nextButton, notification, userInfo, identify, userName, userEmail };
   
-verifyPassword("su1233sdfs");
+//console.log();
 const userInfo = {
   userName:'no_name',
   userEmail:"no_email",
@@ -32,11 +32,11 @@ let identify = "isNotIdentify";
 let create = "isNotCreated";
 renderDefault();
 nextButton.addEventListener("click", () => {
-  let verified = verifyEmail(userEmail.value);
-  if (verified) {
+  let verifiedEmail = verifyEmail(userEmail.value);
+  if (verifiedEmail) {
     eErrormsg.innerText = "successfully validated";
   }
-  if (userName.value != '' && verified) {
+  if (userName.value != '' && verifiedEmail) {
     identify = "identified";
   }
   else {
@@ -53,6 +53,7 @@ backButton.addEventListener("click",()=> {
   renderDefault();
 });
 let isInputEmpty = false;
+  let verifiedPassword = verifyPassword(createPassword.value);
 registerButton.addEventListener("click", () => {
   isInputEmpty = !createPassword.value || !confirmPassword.value;
   if (isInputEmpty) {
@@ -62,18 +63,23 @@ registerButton.addEventListener("click", () => {
    notification.style.display = "none";
  }, 3000);
   } else {
-    if ((createPassword.value === confirmPassword.value)) {
-      userInfo.password = confirmPassword.value;
-      document.body.innerHTML = " account was succesfully created loading to dashboard ";
+    if (verifyPassword) {
+      if ((createPassword.value === confirmPassword.value)) {
+        userInfo.password = confirmPassword.value;
+        document.body.innerHTML = " account was succesfully created loading to dashboard ";
       
+      }
+      else {
+        //alert("create and confirm must be the same try again");
+        notification.style.display = "flex";
+        notification.innerHTML = "create and confirm must be the same try again";
+        setTimeout(() => {
+          notification.style.display = "none";
+        }, 3000);
+      }
     }
     else {
-      //alert("create and confirm must be the same try again");
-      notification.style.display = "flex";
-      notification.innerHTML = "create and confirm must be the same try again";
-      setTimeout(() => {
-        notification.style.display = "none";
-      }, 3000);
+      console.log("you must make it strong to continue ");
     }
   };
 });
