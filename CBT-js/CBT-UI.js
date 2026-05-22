@@ -2,7 +2,6 @@ export { showQuestion };
 import { displayAnswer,saveAction } from "./tracker.js";
 import { answers,index,questionSpan,options } from "./CBT.js";
 import { questions } from "./questions.js";
-
 function showQuestion() {
   const Qnumber = document.querySelector(".question-number");
   const Qtext = document.querySelector('.question-text');
