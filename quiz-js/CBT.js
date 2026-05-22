@@ -1,8 +1,8 @@
 
-import { showQuestion,displayAnswer} from '/quiz-js/tracker.js';
-import {userAction } from './result.js';
+import { showQuestion,displayAnswer} from './tracker.js';
+import {submitRequest } from './result.js';
 import { Autosave } from './auto-save.js';
-import { quiz } from './questions.js';
+import { questions } from './questions.js';
 export { index, options, answers, notificationContainer, questionSpan, buttonsArray };
 /* HTML element to start changing the System (defined engines) */
 const body = document.querySelector("body");
@@ -17,7 +17,7 @@ const QoptionA = document.querySelector(".optionA");
 const QoptionB = document.querySelector(".optionB");
 const QoptionC = document.querySelector(".optionC");
 const QoptionD = document.querySelector(".optionD");
-const lastIndex = quiz.length - 1;
+const lastIndex = questions.length - 1;
 const options = document.querySelectorAll("input[name='a']");
 /* Hide notification div  */
 notificationContainer.style.display = "none";
@@ -32,10 +32,10 @@ let index = 0;
  
 
 /* state manager array for user action about answer  */
-let answers = Array(quiz.length).fill(null);
+let answers = Array(questions.length).fill(null);
 
 /* display Totol Question */
-totalQuestions.innerHTML = `${quiz.length}`;
+totalQuestions.innerHTML = `${questions.length}`;
 
 /* display first question and its options  */
 showQuestion();
@@ -52,7 +52,7 @@ body.addEventListener('keydown', () => {
     document.querySelector(".goto-container").style.display = "flex";
   }
   else if (event.key.toUpperCase() === 's'.toUpperCase()) {
-    userAction()
+    submitRequest()
   }
  
   else if (event.key.toUpperCase() === 'a'.toUpperCase()) {
@@ -139,7 +139,7 @@ nextButton.addEventListener('click', () => {
 
   /*Generate goto buttons from array of questions */
 let buttons = "";
-quiz.forEach((question,index) => {
+questions.forEach((question,index) => {
   buttons += `<button  id="current-index${index}" class="question-button">${index + 1} </button>`;
 });
 GotoButtonsHtml = `<span>${buttons}</span>`;
@@ -180,7 +180,7 @@ buttonsArray.forEach((button, position) => {
 /* submit the entire exam once user click submit and confirm it by clicking yes j */
 submitButton.addEventListener("click", () => {
 
-  userAction();
+  submitRequest();
 });
 /** Automatically submit the CBT  */
 Autosave();

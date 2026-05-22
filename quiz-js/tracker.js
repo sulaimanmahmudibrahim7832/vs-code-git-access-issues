@@ -1,6 +1,6 @@
-import { index, answers, options,questionSpan,buttonsArray} from "/quiz-js/quiz.js";
-import { quiz } from "./questions.js";
-export { displayAnswer, showQuestion };
+import { index, options, questionSpan, buttonsArray, answers } from "./CBT.js";
+import { questions } from "./questions.js";
+export { displayAnswer, showQuestion};
   /* show that question has answered  */
 function displayAnswer(index) {
     for (let i = 0; i < buttonsArray.length; i++) {
@@ -25,12 +25,12 @@ function showQuestion() {
   const QoptionC = document.querySelector(".optionC");
   const QoptionD = document.querySelector(".optionD");
 
-  Qnumber.textContent = quiz[index].questionId;
-  Qtext.textContent = quiz[index].questionText;
-  QoptionA.textContent = quiz[index].optionA;
-  QoptionB.textContent = quiz[index].optionB;
-  QoptionC.textContent = quiz[index].optionC;
-  QoptionD.textContent = quiz[index].optionD;
+  Qnumber.textContent = questions[index].questionId;
+  Qtext.textContent = questions[index].questionText;
+  QoptionA.textContent = questions[index].optionA;
+  QoptionB.textContent = questions[index].optionB;
+  QoptionC.textContent = questions[index].optionC;
+  QoptionD.textContent = questions[index].optionD;
 
   questionSpan.innerHTML = `${index + 1}`;
   options.forEach(

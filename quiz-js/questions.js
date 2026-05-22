@@ -1,5 +1,5 @@
-export { quiz };
-  const quiz = [
+export { questions };
+  const questions = [
      {
     questionId: "1",
     questionText: "which of the following is an example of a discrete random variable?",

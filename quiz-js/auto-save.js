@@ -1,4 +1,4 @@
-import { userAction } from "./result.js";
+
 export { Autosave };
 function Autosave() {
   const Timer = document.querySelector(".time-tracker");

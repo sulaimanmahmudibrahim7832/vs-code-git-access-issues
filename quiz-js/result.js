@@ -1,6 +1,6 @@
-import {  answers, index,notificationContainer } from "./quiz.js";
-import { quiz } from "/quiz-js/questions.js";
-export { userAction };
+import {  answers, index,notificationContainer } from "./CBT.js";
+import { questions } from "./questions.js";
+export { submitRequest };
   const result = {
   corrects: 0,
   skips: 0,
@@ -9,7 +9,7 @@ export { userAction };
 function calculateResult() {
   answers.forEach((question) => {
   
-  if (question === quiz[index].correct) {
+  if (question === questions[index].correct) {
     result.corrects++;
   
   }
@@ -22,7 +22,7 @@ function calculateResult() {
 });
 };
  
- function userAction() {
+ function submitRequest() {
   notificationContainer.style.display = "flex";
  notificationContainer.innerHTML = `<div> 
   <h4> Are you sure you want to submit </h4>
