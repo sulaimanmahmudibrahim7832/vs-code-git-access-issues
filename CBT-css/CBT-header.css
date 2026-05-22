@@ -1,14 +1,11 @@
-/*.page-container{
- min-height:10vh;
- 
-}*/
+
 .header-container{
   display:flex;
   justify-content: space-between;
   align-items: center;
   justify-items: center;
   border:solid 1px gray;
-  padding:10px;
+  padding:2px;
   background-color: #150c25;
   color:white;
 font-weight:bold;
@@ -22,18 +19,19 @@ font-weight:bold;
 @media (max-width:420px){
   .header-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #150c25;
     color:white;
     font-weight:bold;
     font-family: Arial;
-    font-size:17px;
+    font-size:13px;
     border-radius:10px;
+     height:10vh;
   }
   .header-container div{
     border:solid white 2px;
     padding:2px;
-
+    font-size:10px;
   }
 }
 @media (max-width:365px){
@@ -42,7 +40,8 @@ font-weight:bold;
     height:15vh;
     font-size: 10px;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: none;
+    height:10vh;
   }
 }

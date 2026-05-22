@@ -2,6 +2,7 @@ body{
   font-family:Arial;
   font-weight:500;
   background-color:#f7f7f7;
+  align-items: center;
 }
 *{
   padding:0;
@@ -15,7 +16,7 @@ html,body{
 .page-container{
  min-height:100vp;
   justify-content: center;
-  align-items: cenetr;
+  align-items: center;
 }
 .submit-notification{
   display: flex;
@@ -25,39 +26,4 @@ html,body{
   top:30%;
   left:20%;
   padding:100px;
-}
-
-.question-button{
-  background-color:green;
-  color:white;
-  margin:0.5px;
-}
-.question-button:hover{
-  opacity:0.6;
-}
-@media (max-width:412px){
-  .question-button{
-    margin:0;
-    font-weight: bold;
-    font-size:10px;
-  }
-}
-.question-button:active{
-  background-color: white;
-  color:black;
-}
-.current-index{
-  background-color:white;
-  color:black;
-  box-shadow: gray 2px 2px 2px ;
-  border:solid 1px gray;
-  font-weight: bold;
-}
-.is_answered{
-  background-color:rgb(61, 188, 234);
-  color:white;
-}
-.last-index{
-  opacity:0.5;   
-  border:none;                                        
 }

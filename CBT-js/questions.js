@@ -12,7 +12,7 @@ export { questions };
   },
   {
     questionId: "2",
-    questionText: "if we examine three different class squantially, and documentn the result in each of examination as F(Female) and M(Male)then the sample space is  s = { FFF, FFM, FMF, FMM, MFF, MFM, MMF, MMM } ? ",
+    questionText: "if we examine three different class squantially, and document the result in each of examination as F(Female) and M(Male)then the sample space is  s = { FFF, FFM, FMF, FMM, MFF, MFM, MMF, MMM } ? ",
 optionA: "4",
     optionB: "6",
     optionC: "8",
