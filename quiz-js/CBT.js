@@ -1,5 +1,6 @@
 
-import { showQuestion,displayAnswer} from './tracker.js';
+import { displayAnswer } from './tracker.js';
+import { showQuestion } from './CBT-UI.js';
 import {submitRequest } from './result.js';
 import { Autosave } from './auto-save.js';
 import { questions } from './questions.js';
