@@ -1,5 +1,5 @@
-export { renderDefault ,GotonextStep};
-  import { backButton,passwordContainer,registerButton,identityContainer,nextButton,notification,userInfo,identify ,userName,userEmail} from "./registration.js";
+export { renderDefault ,GotonextStep,nullErrMsgSession,errmsgsession};
+  import { backButton,passwordContainer,registerButton,identityContainer,nextButton,notification,userInfo,identify ,userName,userEmail,errormsg} from "./registration.js";
 function renderDefault() {
   backButton.style.display = "none";
 passwordContainer.style.display = "none";
@@ -19,11 +19,21 @@ function GotonextStep() {
     userInfo.userEmail = userEmail.value;
   }
   else {
-    notification.style.display = "flex";
     notification.innerHTML = "please enter your name and email address";
-    setTimeout(() => {
-      notification.style.display = "none";
-    }, 3000);
+    nullErrMsgSession();
   }
+}
+function nullErrMsgSession() {
+   notification.style.display = "flex";
+ setTimeout(() => {
+   notification.style.display = "none";
+ }, 3000);
+}
+function errmsgsession() {
+  errormsg.style.display = "inline-block";
+  setTimeout(() => {
+    errormsg.style.display = "none";
+  },
+    1500);
 }
 

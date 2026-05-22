@@ -1,5 +1,5 @@
 export { verifyEmail };
-  import { highlightEmailError} from "./registration.js";
+  //import { highlightEmailError} from "./registration.js";
 function verifyEmail(email) {
   let atCount = 0;
   let dotCount = 0;
@@ -33,7 +33,6 @@ function verifyEmail(email) {
         dotPosition = email.indexOf(ch);
       }
     }
-    //console.log(dotPosition, atPostion);
   }
 
 
@@ -72,12 +71,11 @@ function verifyEmail(email) {
    updateOccurence(email);
   let count = validateCount();
   updatePosition(email);
-  //console.log(atPostion,dotPosition);
   let relatedpos = relateBoundary();
   let atbound = setAtBoundary(email);
   let dotbound = setDotBoundary(email); 
   //console.log(dotbound);
-  highlightEmailError(count,relatedpos,atbound,dotbound);
+  //highlightEmailError(count,relatedpos,atbound,dotbound);
   if (!hasSpace&&  count && relatedpos && atbound && dotbound) {
     return true;
   }

@@ -1,9 +1,7 @@
 import { verifyEmail } from './regestration_email.js';
-import { renderDefault, GotonextStep } from './registration-ui.js';
+import { renderDefault, GotonextStep,nullErrMsgSession,errmsgsession } from './registration-ui.js';
 import { verifyPassword} from './registration-password.js';
-export { highlightEmailError, backButton, passwordContainer, registerButton, identityContainer, nextButton, notification, userInfo, identify, userName, userEmail };
-  
-//console.log();
+export {  backButton, passwordContainer, registerButton, identityContainer, nextButton, notification, userInfo, identify, userName, userEmail,errormsg};
 const userInfo = {
   userName:'no_name',
   userEmail:"no_email",
@@ -13,14 +11,13 @@ const identityContainer = document.querySelector(".identity-input");
 const passwordContainer = document.querySelector(".password-input");
 const transition = document.querySelector(".action-container");
 
-
 // input data ;
 const userName = document.querySelector('.user-name');
 const userEmail = document.querySelector('.user-email');
 const createPassword = document.querySelector(".create-password");
 const confirmPassword = document.querySelector(".confirm-password");
 const notification = document.querySelector(".notification-container");
-const eErrormsg = document.querySelector(".E-message");
+const errormsg = document.querySelector(".E-message");
 //console.log(userName, userEmail, createPassword, confirmPassword);
 
 // buttons data 
@@ -34,71 +31,54 @@ renderDefault();
 nextButton.addEventListener("click", () => {
   let verifiedEmail = verifyEmail(userEmail.value);
   if (verifiedEmail) {
-    eErrormsg.innerText = "successfully validated";
+    errormsg.innerText = "successfully validated";
+    errmsgsession();
+  }
+  else {
+    errormsg.innerText = "please validate your email ";
+    errmsgsession();
+
   }
   if (userName.value != '' && verifiedEmail) {
     identify = "identified";
   }
   else {
     identify = "isNotIdentify";
-    setTimeout(() => {
-  eErrormsg.style.display = "none";
-}),
-  3000
   }
-   eErrormsg.style.display = "inline-block";
+   errormsg.style.display = "inline-block";
   GotonextStep();
 });
 backButton.addEventListener("click",()=> {
   renderDefault();
 });
 let isInputEmpty = false;
-  let verifiedPassword = verifyPassword(createPassword.value);
 registerButton.addEventListener("click", () => {
+  let verifiedPassword = verifyPassword(createPassword.value);
+  if (verifiedPassword) {
+    errormsg.innerText = "you create a strong password";
+  }
   isInputEmpty = !createPassword.value || !confirmPassword.value;
   if (isInputEmpty) {
-     notification.style.display = "flex";
- notification.innerHTML = "input must not be empty try again";
- setTimeout(() => {
-   notification.style.display = "none";
- }, 3000);
-  } else {
-    if (verifyPassword) {
+    //console.log("input must not be empty ");
+    notification.innerText = "input must not be empty";
+    nullErrMsgSession();
+  }
+  else {
+    console.log(verifiedPassword);
+    if (verifiedPassword) {
       if ((createPassword.value === confirmPassword.value)) {
         userInfo.password = confirmPassword.value;
         document.body.innerHTML = " account was succesfully created loading to dashboard ";
-      
       }
       else {
-        //alert("create and confirm must be the same try again");
-        notification.style.display = "flex";
         notification.innerHTML = "create and confirm must be the same try again";
-        setTimeout(() => {
-          notification.style.display = "none";
-        }, 3000);
+          nullErrMsgSession();
       }
     }
     else {
-      console.log("you must make it strong to continue ");
+      errormsg.innerText = "you must make password strong to continue ";
+      errmsgsession();
+      //console.log("you must make password strong to continue ");
     }
-  };
-});
-
-function highlightEmailError(count,relatedpos,atbound,dotbound) {
-  const errorLogs = {
-    count,relatedpos,atbound,dotbound
   }
-  let text = '';
-  count === false? text += ` (${emailErrormsg.count})`: eErrormsg.innerText = "";
-   relatedpos === false? text += ` ( ${ emailErrormsg.relatedpos })` : eErrormsg.innerText = "";
-  atbound === false ? text += ` (${emailErrormsg.atbound})` : eErrormsg.innerText = "";
-  dotbound === false ? text += `( ${emailErrormsg.dotbound})` : eErrormsg.innerText = "";
-  eErrormsg.innerText = text;
-}
-
-const emailErrormsg = {
-  count: "please remove extra @ and leave only one at",
-  relatedpos: "@ must come first then . ",
-  atbound: "make it in the format of 'text@text' ",
-  dotbound:"the format of 'text.text'"
-}
+});
