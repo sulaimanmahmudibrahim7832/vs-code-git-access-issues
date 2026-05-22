@@ -2,8 +2,8 @@
   display:flex;
   justify-content:space-between;
   position:fixed;
-  left:5vw;
-  right:5vw;
+  left:2vw;
+  right:2vw;
   bottom:0;
 }
 .nav-container button{
