@@ -1,0 +1,47 @@
+.main-profile-img{
+  width:100px;
+  border:none;
+  border-radius: 50px;
+}
+.main-content{
+  display:flex;
+  justify-content: center;
+  border:solid 1px black;
+  margin-top:2px;
+  height: fit-content;
+}
+.main-data{
+    height:70vh;
+  border:solid 1px gray;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:60vw;
+}
+.user-info{
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  row-gap:20px;
+}
+.academic-summary{
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  row-gap: 20px;
+}
+.subject-info{
+  display: flex;
+  flex-direction: column;
+  border:solid 1px black;
+}
+.subject-data{
+  display:flex;
+  flex-direction: column;
+  border:solid 1px black;
+}
+.subject-data span{
+  border:solid 1px black;
+  margin:1px;
+}
