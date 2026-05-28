@@ -1,25 +1,31 @@
 .header{
-  border: solid 1px black;
   display: flex;
   justify-content: space-between;
+  border-bottom: solid 1px gray;
+}
+.menu{
+  display:flex;
+  flex-direction: column;
 }
 .header-left{
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 1px 1px 1px black;
 }
 .system-logo{
-  box-shadow: 0.56px 0.56px 0.1px rgb(34, 25, 25);
+background-color:black;
+border-radius: 10%;
 }
 .system-img{
-  width:80px;
-  border-radius: 40px;
+  width:50px;
+  border-radius: 25px;
 }
 .header-center{
   display: flex;
   justify-content: center;
   align-items: center;
-
+ border:solid 1px gray;
 }
 .header-left{
   width:inherit;
@@ -29,9 +35,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  border:solid 1px gray;
 }
 .profile-img{
-  width:30px;
-  border-radius: 15px;
+  width:20px;
+  border-radius: 10px;
 }
