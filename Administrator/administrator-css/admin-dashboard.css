@@ -1,0 +1,27 @@
+.user-info{
+  display:flex;
+  align-items: center;
+  border:solid 1px black;
+  max-width: max-content;
+}
+
+.dashboard-panel{
+  display:flex;
+  flex-direction: column;
+  border: solid 1px black;
+  width: 169px;
+}
+
+/* images */
+.dashboard{
+  width:50px;
+}
+.exam-img,.schedule-img{
+  width:25px;
+}
+.create-exam a,.set-schedule a, .results a{
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
