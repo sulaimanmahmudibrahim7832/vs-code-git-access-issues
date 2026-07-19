@@ -1,72 +1,13 @@
-.header-nav{
-border:solid 1px black;
-
-}
-*{
+body{
+  background-color:white;
   padding:0;
-  margin:1px;
+  margin:0;
 }
-.dashboard-menu{
- border:solid 1px black;
- max-width: max-content;
- position: fixed;
- left:0;
- top:25px;
- height: 100vh;
-}
-.dashboard-title{
-  display:flex;
-  align-items: center;
-  
-}
-
-.dashboard-panel{
-  display:flex;
-  flex-direction: column;
-  order:solid 1px black;
-}
-.user-info,.create-exam,.set-schedule,.results,.recent-activities{
-  background-color: #77c420;
-  color:rgb(51, 11, 11);
-  border:solid 1px gray;
-  border-radius: 10px;
-}
-.user-info{
-  background-color: #9fdc59;
-}
-
-
-
-
-
-/* images */
-.dashboard{
-  width:50px;
-}
-.user-img,.exam-img,.schedule-img{
-  width:25px;
-}
-.profile-img{
-  width:100px;
-}
-.create-exam a,.set-schedule a, .results a{
-
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/*body*/
+.main-body{
+  display:grid;
+  grid-template-columns: 22vw 1fr;
+  height: 78vh;
+} 
 .dashboard-body{
-position: relative;
-display:flex;
-flex-direction: column;
-}
-/* cards style */
-
-.profile-card,.exam-card,.schedule-card,.result-card{
-   display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- padding:10px;
+  width:76vw;
 }

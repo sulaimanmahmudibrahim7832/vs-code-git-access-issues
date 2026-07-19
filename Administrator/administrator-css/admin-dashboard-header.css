@@ -1,0 +1,11 @@
+.header-nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  border: solid 1px  #041815;
+  color:black;
+}
+.header-nav div{
+  border:solid 1px black;
+}

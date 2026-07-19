@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administrator Dashboard</title>
-  <!--
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard.css">-->
+  
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-header.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-left.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-footer.css">
   <style>
     img{
       width:50px;
@@ -13,25 +16,22 @@
   </style>
 </head>
 <body>
+  <div>
   <div class="header-nav"> 
-    <center>
-     <div>Arewa CBT </div>
-    </center>
+    
+     <div>Arewa CBT 
+        <span>Admin Dashboard </span>
+     </div>
+   
+    <div class="dashboard-title">
+</div>
     <div class="event">
 Upcoming Event: Physics on 21st june 2026 by 10:30am
     </div>
   </div>
-
-  <div class="dashboard-menu"> 
-
-  <div class="dashboard-title">
-      <span>Admin Dashboard </span>
-      <img class="dashboard" src="../data/dashboard-4-svgrepo-com.svg" >
-  </div>
-
-
-
-    <div class="dashboard-panel">
+<div class="main-body">
+  
+    <div class="left-nav">
       <div class="user-info">
       <img class="user-img" src="../data/user-svgrepo-com.svg">
      <span>User info</span>
@@ -64,30 +64,7 @@ Upcoming Event: Physics on 21st june 2026 by 10:30am
     <p>Recent Activities </p>
   </div>
 </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-
   <div class="dashboard-body">
 
 <div class="profile-card">
@@ -104,15 +81,19 @@ Upcoming Event: Physics on 21st june 2026 by 10:30am
 </div>
 <div class="exam-card">
     <div class="exam-title">
-      Create Examination
+    first Monthly test
     </div>
     <div class="exam-summary">
-    new examination and define its basic information
+    <div> Subject:Physics</div>
+    <div>duration: 30min</div>
+    <div>Questions:25</div>
+    <div>status: in progress</div>
     </div>
     <div>
       <a href="createExam.html">
-      <button>Open</button>
+      <button>create New</button>
       </a>
+      <button>Open</button>
     </div>
 </div>
 <div class="schedule-card">
@@ -121,13 +102,19 @@ Upcoming Event: Physics on 21st june 2026 by 10:30am
      Schedule
  </div>
  <div class="schedule-summary">
- set or update examination schedules 
+<div>Examination Date: 31s july 2026</div>
+<div>Examination time: 10:30 am</div>
+<div>title: monthly test </div>
+<div>status in progress </div>
  </div>
  <div>
     <a href="schedule.html" >
       
-   <button>Open</button>
+   <button> create Schedule </button>
    </a>
+   <button>
+   open
+   </button>
  </div>
 </div>
 <div class="result-card">
@@ -135,22 +122,24 @@ Upcoming Event: Physics on 21st june 2026 by 10:30am
    Examination Results
  </div>
  <div class="result-summary">
-  reviews of student's examination performance 
+  <div>exam title: monthly test </div>
+  <div>completed date : 10/07/2026 </div>
+  <div>time: 12:00am</div>
+  <div>participants: 20 students </div>
  </div>
  <div>
    <a href="../Result/result.html">
-   <button>Open</button>
+   <button>View result </button>
    </a>
  </div>
 </div>
   </div>
-
-  <div class="footer">
-  <div>Publishde: 2</div>
-  <div>
-    Total Registrated Student : 30
-  </div>
-
-  </div>
+</div>
+<div class="footer">
+<div>Publishde: 2</div>
+<div>
+  Total Registrated Student : 30
+</div>
+</div>
 </body>
 </html>

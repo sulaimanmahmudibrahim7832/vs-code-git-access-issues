@@ -1,0 +1,19 @@
+.left-nav{
+  display:flex;
+  flex-direction: column;
+  border:solid 1px  #010b09;
+ height:86vh;
+ width:22vw;
+}
+.left-nav img{
+  width:25px;
+}
+.user-info,.create-exam,.set-schedule,.results{
+  border: inherit;
+  border:solid 1px rgb(23, 11, 11);
+  margin-top:1px; 
+  display:flex;
+  flex-direction: column;
+  align-items: cenetr;
+  cursor:pointer;
+}
