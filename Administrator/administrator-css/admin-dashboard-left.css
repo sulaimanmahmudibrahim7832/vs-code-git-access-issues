@@ -1,19 +1,33 @@
-.left-nav{
+:root{
+--aside-bg:#1e293b;
+--aside-text:#f8fafc;
+--aside-icon:#d2cacab4;
+--aside-hover:#334155;
+--aside-active:#3357a6;
+
+}
+aside{
   display:flex;
   flex-direction: column;
   border:solid 1px  #010b09;
  height:86vh;
  width:22vw;
+ position:fixed;
+ background-color:var(--aside-bg);
+ color:var(--aside-text);
+ justify-content:top;
+cursor:pointer;
 }
-.left-nav img{
-  width:25px;
+aside img{
+  background-color: #d2cacab4;
+  border-radius: 25px;
 }
-.user-info,.create-exam,.set-schedule,.results{
-  border: inherit;
-  border:solid 1px rgb(23, 11, 11);
-  margin-top:1px; 
-  display:flex;
-  flex-direction: column;
-  align-items: cenetr;
-  cursor:pointer;
+aside div:hover{
+  background-color: var(--aside-hover);
+}
+aside div:active{
+  background-color: var(--aside-active);
+}
+.user-info{
+  background-color: var(--aside-active);
 }

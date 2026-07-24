@@ -1,11 +1,19 @@
-.header-nav{
+header{
+  background-color: var(--primary);
+  color:white;
   display:flex;
   justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-  border: solid 1px  #041815;
-  color:black;
+  height:var(--header-height);
 }
-.header-nav div{
-  border:solid 1px black;
+.system-brand{
+  display:grid;
+  align-items: center;
+}
+.dashboard-title img{
+color:white;
+background-color: white;
+border-radius:12px;
+}
+.logo-img{
+  border-radius: 10px;
 }
