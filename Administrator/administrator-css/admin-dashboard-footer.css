@@ -9,5 +9,7 @@ left:0;
 right:1px;
 display:flex;
 column-gap:20px;
+z-index:2;
+background-color: orange;
 }
 

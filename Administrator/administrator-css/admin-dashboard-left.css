@@ -9,18 +9,27 @@
 aside{
   display:flex;
   flex-direction: column;
-  border:solid 1px  #010b09;
  height:86vh;
  width:22vw;
  position:fixed;
  background-color:var(--aside-bg);
  color:var(--aside-text);
  justify-content:top;
+ align-items: left;
 cursor:pointer;
+margin-top:11vh;
+z-index:1;
 }
+aside div{
+  background-color: rgb(47, 105, 158);
+  margin-top:8px;
+  display:grid;
+}
+
 aside img{
   background-color: #d2cacab4;
   border-radius: 25px;
+
 }
 aside div:hover{
   background-color: var(--aside-hover);

@@ -42,6 +42,10 @@ width:var(--button-width);
 font-size:var(--button-font-size);
 border-radius: var(--button-radius);
 }
+button:hover{
+  background-color: var(--button-hover);
+  cursor:pointer;
+}
 
 body{
   font-size:var(--font-size);
@@ -57,11 +61,16 @@ main{
   width:76vw;
   margin-left:23vw;
   background-color: var(--main-bg);
-
 }
-.cards div{
-  background-color: var(--card-bg);
-  width: var(--card-width);
+
+.cards{
+  padding-top:11vh;
+  display:grid;
+  grid-template-columns: 1fr ;
+}
+.activity-data{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 
