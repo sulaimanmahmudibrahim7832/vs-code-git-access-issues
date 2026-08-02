@@ -4,19 +4,207 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student-dashboard</title>
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-header.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-left.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-footer.css">
 </head>
 <body>
-<h1>Dashboard</h1>
+    <header class="header-nav"> 
+      
+     <div class="system-brand">
+      <img class="logo-img" src="../data/Arewa-cbt.png">
+      <div>
+      Arewa CBT 
+      </div>
+     </div>
+     <div class="search-bar"> 
+      <input class="search-input" type="search" placeholder="Search "> <button 
+class="search-button">search</button> </div>
+
+   
+    <div class="dashboard-title">
+         <div>
+           <img src="../Student/student-data/student-img.jpeg"> 
+         </div>
+         <div>Student</div>
+    </div>
+    <div class="event">
+      <div>
+<img src="../data/upcoming.png">
+<div class="notification-message"> 10 </div>
+      </div>
+     <div>
+      Physics Exam
+     </div> 
+    </div>
+  </header>
+    <aside class="left-nav">
+          <div class="user-info">
+          <img class="user-img" src="../data/user-svgrepo-com.svg">
+         <span>User info</span>
+          </div>
+       <div class="create-exam">
+      <span>
+         <img class="exam-img" src="../data/exam-svgrepo-com (1).svg">
+       </span>
+         <span>
+          Exams 
+        </span>
+      </div>
+      <div class="set-schedule">
+    <img class="schedule-img" src="../data/schedule-svgrepo-com.svg">
+    Available Exam
+      </div>
+      <div class="results">
+         <img class="schedule-img" src="../data/result-svgrepo-com.svg">
+      view result
+    </div>
+    <div class="recent-activities">
+      <p>Recent Activities </p>
+    </div>
+</aside>
+<main>
+  <h1>Dashboard</h1>
 <h2>Welcome Abba Umar Lawal </h2>
+<!--<div class="card">
   <div class="user-info">
+    
 <p>Name:Abba Umar Lawal </p>
 <p>Matric Number:dsck/21/c0035</p>
+</div>
+  </div>-->
+  <card>
+    <div class="profile-card">
+  
+<div class="profile-details">
+<img class="profile-img" src="../data/user-svgrepo-com.svg">
+<div>Username: abbaUmar5678</div>
+<p>Matric Number:dsck/21/c0035</p>
+</div>
+<div class="profile-action">
+<button>Edit profile</button>
+<button>Change Password</button>
+<button>Logout</button>
+</div>
+</div>
+  </card>
+<div class="card">
+<div class="availabel-exam">
+  <h4>Available Exam</h4> 
+     <table border="1px">
+     <thead>
+       <tr>
+         <th>
+           Day
+         </th>
+         <th>
+           Date
+         </th>
+         <th>
+           Subjects
+         </th>
+         <th>
+           Duration
+         </th>
+         <th>
+           time
+         </th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>
+           Friday
+         </td>
+         <td>
+           01/08/2026
+         </td>
+         <td>
+           physics <br>
+           chemistry
+         </td>
+         <td>
+           2 hours
+         </td>
+         <td>
+           9:00am
+         </td>
+         
+       </tr>
+          <tr>
+    <td>
+      Monday
+    </td>
+    <td>
+      02/08/2026
+    </td>
+    <td>
+      Mathematics
+    </td>
+    <td>
+      1 hour
+    </td>
+    <td>
+      10:00am
+    </td>
+    
+  </tr>
+     <tr>
+    <td>
+      Thursday
+    </td>
+    <td>
+      14/08/2026
+    </td>
+    <td>
+      English 
+    </td>
+    <td>
+      45 minutes
+    </td>
+    <td>
+      8:15am
+    </td>
+    
+  </tr>
+     </tbody>
+   </table>
+ </div>
+ <div><button>
+<a href="../Student/E-Available.html"> View all </a>  
+</button></div>
+</div>
+  <div class="card">
+  <div class="start-exam"> 
+<h4>Start</h4>
+<table border="1px">
+  <tbody>
+    <thead>
+      <tr>
+        <th>Subjects</th>
+        <th>Duration</th>
+        <th>time</th>
+      </tr>
+    </thead>
+    <tr>
+     <td>English <br> Mathematics </td>
+     <td>30 mins </td>
+     <td>9:00am</td>
+    </tr>
+  </tbody>
+</table>
+<button ><a href="../quiz.html" >Start</a></button>
+<button><a href="../Student/take-exam.html">Open</a></button>
   </div>
-  <div class="availabel-exam">
-    <p>Available Exam</p>
-  </div>
-  <div class="take-exam"> 
-<p>Take Exam</p>
-  </div>
+  </div> 
+
+</main>
+<footer class="footer">
+<div>Available Exams : 2</div>
+<div>
+  Total Registrated Student : 30
+</div>
+</footer>
 </body>
 </html>

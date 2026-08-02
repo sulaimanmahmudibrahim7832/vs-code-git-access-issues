@@ -19,6 +19,7 @@ aside{
 cursor:pointer;
 margin-top:11vh;
 z-index:1;
+top:0;
 }
 aside div{
   background-color: rgb(47, 105, 158);

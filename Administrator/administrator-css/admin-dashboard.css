@@ -63,10 +63,11 @@ main{
   background-color: var(--main-bg);
 }
 
-.cards{
+.card{
   padding-top:11vh;
   display:grid;
   grid-template-columns: 1fr ;
+  padding-bottom:5vh;
 }
 .activity-data{
   display:grid;
