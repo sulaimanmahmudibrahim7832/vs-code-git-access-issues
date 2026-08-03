@@ -1,0 +1,13 @@
+header{
+  display:flex;
+  justify-content: space-between;
+  height:11vh;
+  border:solid 2px gray;
+  position:fixed;
+  top:0;
+  left:0;
+  right:1px;
+}
+body{
+  padding-top:6.8vh;
+}
