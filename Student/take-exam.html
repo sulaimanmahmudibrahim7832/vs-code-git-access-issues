@@ -1,29 +1,90 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Exam page</title>
+  <title>Start Exam</title>
+  <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
 </head>
 <body>
-  <h1>Published Exam </h1>
-  <h3>update:<span>Today</span></h3>
-  <table border="1px">
-    <tbody>
-      <thead>
-        <tr>
-          <th>Subjects</th>
-          <th>Duration</th>
-          <th>time</th>
-        </tr>
-      </thead>
-      <tr>
-       <td>English <br> Mathematics </td>
-       <td>30 mins </td>
-       <td>9:00am</td>
-      </tr>
-    </tbody>
-  </table>
-  <button ><a href="../quiz.html" >Start</a></button>
+  <header class="header-nav">
+    <div class="system-brand">
+      <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+      <div>Arewa CBT</div>
+    </div>
+    <div class="search-bar">
+      <input class="search-input" type="search" placeholder="Search exams, schedules, or results" aria-label="Search dashboard">
+      <button class="search-button">Search</button>
+    </div>
+    <div class="dashboard-title">
+      <img src="../Student/student-data/student-img.jpeg" alt="Student image">
+      <div>Take Exam</div>
+    </div>
+    <div class="event">
+      <div>
+        <img src="../data/upcoming.png" alt="Upcoming exam">
+        <div class="notification-message">2</div>
+      </div>
+      <div>Published exams</div>
+    </div>
+  </header>
+  <aside class="left-nav">
+    <div class="user-info">
+      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Student avatar">
+      <span>Student</span>
+    </div>
+    <nav class="sidebar-nav" aria-label="Student menu">
+      <a class="sidebar-item" href="student.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Exam icon">
+        <span>Exams</span>
+      </a>
+      <a class="sidebar-item" href="E-Available.html">
+        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Available exam icon">
+        <span>Available exams</span>
+      </a>
+      <a class="sidebar-item active" href="take-exam.html">
+        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
+        <span>Start exam</span>
+      </a>
+    </nav>
+  </aside>
+  <main class="main-body">
+    <div class="page-heading">
+      <h1>Published Exam</h1>
+      <div class="button-row">
+        <button class="secondary">Refresh</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Available Exam</h1>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Subjects</th>
+              <th>Duration</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>English, Mathematics</td>
+              <td>30 mins</td>
+              <td>9:00am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="button-row">
+        <a class="button-link" href="../quiz.html">Start</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>Active exams: 1</div>
+    <div>Completed: 0</div>
+  </footer>
 </body>
 </html>

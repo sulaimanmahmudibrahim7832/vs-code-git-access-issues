@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrator Create Exam</title>
+  <link rel="stylesheet" href="../Administrator/main-content/main-header.css">
+</head>
+<body>
+   <header>
+   <div class="left-section">
+       Left -section 
+   </div>
+   <div class="middle-section">
+     Middle -section 
+   </div>
+   <div class="right-section">
+    Right - section 
+   </div>
+ </header>
+ <aside>
+  Data 
+ </aside>
+<main>
+    <h1>Create Exam </h1>
+    
+  <div class="Exam-info">
+    <div class="exam-template">
+  <label>Exam-title:<span>Test</span></label>
+  <br>
+  <label>Exam Duration: <span>2 Hours</span> </label>
+    </div>
+    <br>
+    <label>Examination Title</label>
+<input type="text" placeholder="Title">
+<br>
+<br>
+<label>Exam Duration:</label>
+<input type="text" placeholder="Duration">
+<br>
+<button>Save</button>
+  </div>
+    <h3>Manage-courses/subjects</h3>
+  <div class="course-info">
+    <div class="course-contents">
+      <div class="template">
+        <table border="1px">
+          <thead>
+            <tr>
+              <th>
+                S/N
+              </th>
+              <th>
+                Courses
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                1
+              </td>
+              <td>
+                Mathematics
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  2
+                </td>
+                <td>
+                  English
+                </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Chemistry</td>
+            </tr>
+            <tr>
+              <td>
+                4
+              </td>
+              <td>
+                Physics
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<br>
+ <label>Course Title:</label> <input type="text" placeholder="title">
+ <br>
+<button>Add Course</button>
+<br>
+<br>
+    </div>
+
+
+     <div class="questions-template">
+      <select>
+        <option>Mathematics</option>
+        <option>English</option>
+        <option>Chemistry</option>
+        <option>Physics</option>
+      </select>
+      <p>Course:Mathematics</p>
+    <div>Q1. the product of 2^2  and 3^2; is ? </div>
+    <div>
+      <span>A) 36 </span>
+      <br>
+      <span>B) 56</span>
+      <br>
+      <span>C) 78</span>
+      <br>
+      <span>D) 100</span>
+    </div>
+    <br> 
+     <div>Q2. square root of 81 is ____ while 1/8 is equal to ____  </div>
+ <div>
+   <span>A) 9 and 0.25 </span>
+   <br>
+   <span>B) 0.125 and 9</span>
+   <br>
+   <span>C) 13 and 0.125</span>
+   <br>
+   <span>D) 9 and 0.125 </span>
+ </div>
+     </div>
+     <br>
+   <div class="questions">
+
+
+    <label>Questions:</label> <input type="text" placeholder="question">
+     <br>
+     <br>
+    <label>option A:</label> <input class="optionA" type="text" 
+placeholder="Option A">
+          <br>
+        <label>option B:</label> <input class="optionB" type="text" 
+placeholder="Option B">
+        <br>
+        <label>option C:</label> <input class="OptionC" type="text" 
+placeholder="Option C">
+        <br>
+        <label>option D:</label> <input class="OPtionD" type="text" 
+placeholder="Option D">
+        <br>
+        <button>Add question</button>
+
+
+   </div>
+<button class="add-to-schedule">
+Add to schedule 
+</button>
+   
+  </div>
+</main>
+</body>
+</html>

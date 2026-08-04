@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Quiz</title>
+  <link rel="stylesheet" href="Administrator/administrator-css/dashboard-shared.css">
   <link rel="stylesheet" href="CBT-css/CBT-general.css">
   <link rel="stylesheet" href="CBT-css/CBT-header.css">
   <link rel="stylesheet" href="CBT-css/CBT-main.css">
@@ -10,103 +12,108 @@
   <link rel="stylesheet" href="CBT-css/CBT-question.css">
 </head>
 <body>
-<div class="header-container">
- <!-- <div class="user-profile">
-    <img class="user-profile-pic" src="Screenshot 2026-05-15 104123.png">
-    <p>Name:Sulaiman Mahmud Ibrahim </p>
-    <p>ID: SMI/ARW/BEG/00036 </p>
-  </div>-->
-  <div>
-      question
-    <span class="question-progress">
-        <!--current question number -->
-    </span> of 
-    <span class="total-questions">
-      <!--last question number -->
-    </span>
-  </div>
-  <div class="time-tracker">
-  
+  <header class="header-nav">
+   <div class="system-brand">
+     <img class="logo-img" src="data/Arewa-cbt.png" alt="Arewa CBT logo">
+     <div>Arewa CBT</div>
    </div>
-   <div>
-        Mathematics 
+   <div class="search-bar">
+     <input class="search-input" type="search" placeholder="Search questions or exam details" aria-label="Search quiz">
+     <button class="search-button">Search</button>
    </div>
-</div>
-<div class="page-container">
-<div class="Questions-container">
-  <div class="question-text-container">
-    <div >Q).<span class="question-number">
-       <!--question number -->
-    </span></div>
-    <div class="question-text"> 
-         
-      <!-- question text here -->
-    </div>
-  </div>
-
-  <div class="option-goto-container">
-  <div class="option-container">
-    <div >
-        A).<input type="radio" name="a" id="optA" value="A"> 
-        <span  class="optionA">
-         <!--option A -->
-        </span>
-      </div>
-       <div >
-        B).<input type="radio" name="a" id="optB" value="B">  
-        <span class="optionB">
-         <!--option B-->
-        </span>
-       </div>
-        <div >
-        C).<input type="radio" name="a" id="optC" value="C"> 
-        <span class="optionC">
-          <!--option C-->
-        </span>
-      </div>
-       <div >
-         D).<input type="radio" name="a" id="optD" value="D"> 
-         <span class="optionD">
-          <!--option D -->
-        </span>
-        </div>
-         
-      </div>
-         <div class="goto-container" ><!-- goto buttons --></div>
+   <div class="dashboard-title">
+     <img src="data/admin-title-img.png" alt="Quiz screen icon">
+     <div>Online Quiz</div>
    </div>
-  </div>
-  
-  <div class="nav-container">
-    <div>
-      <button class="previous-button">
-        <-Previous
-      </button>
-    </div>
-    <div>
-      <button class="next-button">
-        Next ->
-      </button>
-    </div>
-    <div>
-      <button class="goto-button">
-        Goto
-      </button>
-     </div>
+   <div class="event">
      <div>
-      <button class="submit-button">
-        Submit
-      </button>
+       <img src="data/upcoming.png" alt="Quiz time icon">
+       <div class="notification-message">1</div>
      </div>
-  </div>
-</div>
-<div class="submit-notification">
+     <div>Active exam</div>
+   </div>
+  </header>
 
-</div>
-<div>
-  Sulaiman Mahmud Ibrahim &copy;
-</div>
-<script type="module" src="CBT-js/CBT.js">
+  <aside class="left-nav">
+   <div class="user-info">
+     <img class="user-img" src="data/user-svgrepo-com.svg" alt="Student avatar">
+     <span>Student</span>
+   </div>
+   <nav class="sidebar-nav" aria-label="Quiz menu">
+     <a class="sidebar-item" href="Student/student.html">
+       <img class="exam-img" src="data/exam-svgrepo-com (1).svg" alt="Dashboard icon">
+       <span>Dashboard</span>
+     </a>
+     <a class="sidebar-item" href="Student/E-Available.html">
+       <img class="schedule-img" src="data/schedule-svgrepo-com.svg" alt="Available exams icon">
+       <span>Available exams</span>
+     </a>
+     <a class="sidebar-item" href="Result/result.html">
+       <img class="schedule-img" src="data/result-svgrepo-com.svg" alt="Results icon">
+       <span>Results</span>
+     </a>
+   </nav>
+  </aside>
 
-</script>
+  <main class="main-body">
+   <div class="card quiz-card">
+     <div class="quiz-topbar">
+       <div class="quiz-status">
+         <span class="subject-pill">Mathematics</span>
+         <span class="quiz-progress">
+           Question <span class="question-progress">1</span> of <span class="total-questions">0</span>
+         </span>
+       </div>
+       <div class="time-tracker">30:00</div>
+     </div>
+
+     <div class="Questions-container">
+       <div class="question-text-container">
+         <div class="question-label">
+           <span class="question-badge">Q<span class="question-number"></span></span>
+         </div>
+         <div class="question-text"></div>
+       </div>
+
+       <div class="option-goto-container">
+         <div class="option-container">
+           <label>
+             <input type="radio" name="a" id="optA" value="A">
+             <span class="optionA"></span>
+           </label>
+           <label>
+             <input type="radio" name="a" id="optB" value="B">
+             <span class="optionB"></span>
+           </label>
+           <label>
+             <input type="radio" name="a" id="optC" value="C">
+             <span class="optionC"></span>
+           </label>
+           <label>
+             <input type="radio" name="a" id="optD" value="D">
+             <span class="optionD"></span>
+           </label>
+         </div>
+         <div class="goto-container"></div>
+       </div>
+     </div>
+
+     <div class="nav-container">
+       <button class="previous-button">Previous</button>
+       <button class="next-button">Next</button>
+       <button class="goto-button">Goto</button>
+       <button class="submit-button">Submit</button>
+     </div>
+   </div>
+
+   <div class="submit-notification"></div>
+  </main>
+
+  <footer class="footer">
+   <div>Exam progress: in progress</div>
+   <div>Student name: Sulaiman Mahmud Ibrahim</div>
+  </footer>
+
+  <script type="module" src="CBT-js/CBT.js"></script>
 </body>
 </html>

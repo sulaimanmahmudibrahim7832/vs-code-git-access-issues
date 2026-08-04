@@ -4,8 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
 </head>
-<body>
-  
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-intro">
+      <div class="auth-header">
+        <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+        <div>
+          <h1>Welcome back</h1>
+          <p>Sign in to your account to continue to the exam dashboard.</p>
+        </div>
+      </div>
+
+      <form action="#" method="post" class="auth-form">
+        <div class="role-selector">
+          <label><input type="radio" name="accountType" value="student" checked> Student</label>
+          <label><input type="radio" name="accountType" value="admin"> Admin</label>
+        </div>
+
+        <label>
+          Username
+          <input type="text" name="username" placeholder="Enter your username" required>
+        </label>
+
+        <label>
+          Password
+          <input type="password" name="password" placeholder="Enter your password" required>
+        </label>
+
+        <div class="auth-actions">
+          <button type="submit">Login</button>
+          <span class="auth-note">Not registered yet? <a href="signup.html">Create an account</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

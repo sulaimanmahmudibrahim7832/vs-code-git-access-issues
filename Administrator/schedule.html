@@ -1,112 +1,120 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exam Schedule</title>
+  <link rel="stylesheet" href="administrator-css/dashboard-shared.css">
 </head>
 <body>
-
-  <h1>Create Schedule</h1>
- 
- 
- 
-
- 
- 
-  <div class="schedule-tample">
-    <table border="1px">
-      <thead>
-        <tr>
-          <th>
-            Day
-          </th>
-          <th>
-            Date
-          </th>
-          <th>
-            Subjects
-          </th>
-          <th>
-            Duration
-          </th>
-          <th>
-            time
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Friday
-          </td>
-          <td>
-            01/08/2026
-          </td>
-          <td>
-            physics <br>
-            chemistry
-          </td>
-          <td>
-            2 hours
-          </td>
-          <td>
-            9:00am
-          </td>
-          
-        </tr>
-           <tr>
-     <td>
-       Monday
-     </td>
-     <td>
-       02/08/2026
-     </td>
-     <td>
-       Mathematics
-     </td>
-     <td>
-       1 hour
-     </td>
-     <td>
-       10:00am
-     </td>
-     
-   </tr>
-      <tr>
-     <td>
-       Thursday
-     </td>
-     <td>
-       14/08/2026
-     </td>
-     <td>
-       English 
-     </td>
-     <td>
-       45 minutes
-     </td>
-     <td>
-       8:15am
-     </td>
-     
-   </tr>
-      </tbody>
-    </table>
-  </div>
-  <br>
-  <div class="create-schedule">
-  <label>Day:</label> <input type="text" placeholder="day">
-  <br>
-  <label>Date:</label> <input type="date" >
-  <br>
-  <label>Subjects:</label><input placeholder="subject"> <button>Add</button>
-  <br>
-  <label>Duration:</label> <input type="text" placeholder="duration">
-  <br>
-  <label>Time:</label> <input type="time" placeholder="day">
-  </div>
-  <button>Add to schedule</button>
-  <button>Publish</button>
+  <header class="header-nav">
+    <div class="system-brand">
+      <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+      <div>Arewa CBT</div>
+    </div>
+    <div class="search-bar">
+      <input class="search-input" type="search" placeholder="Search schedules, exams, or students" aria-label="Search schedule">
+      <button class="search-button">Search</button>
+    </div>
+    <div class="dashboard-title">
+      <img src="../data/admin-title-img.png" alt="Schedule icon">
+      <div>Schedule</div>
+    </div>
+    <div class="event">
+      <div>
+        <img src="../data/upcoming.png" alt="Upcoming schedule">
+        <div class="notification-message">5</div>
+      </div>
+      <div>Active schedules</div>
+    </div>
+  </header>
+  <aside class="left-nav">
+    <div class="user-info">
+      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Admin avatar">
+      <span>Admin</span>
+    </div>
+    <nav class="sidebar-nav" aria-label="Schedule menu">
+      <a class="sidebar-item" href="admin.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
+        <span>Dashboard</span>
+      </a>
+      <a class="sidebar-item active" href="schedule.html">
+        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
+        <span>Set schedule</span>
+      </a>
+      <a class="sidebar-item" href="../Result/result.html">
+        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
+        <span>View result</span>
+      </a>
+    </nav>
+  </aside>
+  <main class="main-body">
+    <div class="page-heading">
+      <h1>Exam Schedule</h1>
+      <div class="button-row">
+        <button class="secondary">Publish schedule</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Upcoming schedules</h1>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Subjects</th>
+              <th>Duration</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Friday</td>
+              <td>01/08/2026</td>
+              <td>Physics, Chemistry</td>
+              <td>2 hours</td>
+              <td>9:00am</td>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>02/08/2026</td>
+              <td>Mathematics</td>
+              <td>1 hour</td>
+              <td>10:00am</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>14/08/2026</td>
+              <td>English</td>
+              <td>45 minutes</td>
+              <td>8:15am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Create schedule</h1>
+      </div>
+      <div class="create-schedule">
+        <label>Day<input type="text" placeholder="Day"></label>
+        <label>Date<input type="date"></label>
+        <label>Subjects<input type="text" placeholder="Subject"></label>
+        <label>Duration<input type="text" placeholder="Duration"></label>
+        <label>Time<input type="time"></label>
+      </div>
+      <div class="button-row">
+        <button>Save schedule</button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>Planned schedules: 3</div>
+    <div>Active exams: 5</div>
+  </footer>
 </body>
 </html>

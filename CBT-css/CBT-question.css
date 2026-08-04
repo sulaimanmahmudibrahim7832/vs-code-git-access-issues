@@ -1,66 +1,74 @@
-.question-text-container{
-  height:2vh;
-  display:flex;
+.question-text-container {
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top:0;
-  margin-top:0;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border, #dbeafe);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
 }
-.question-number,.question-text{
-  color:green;
-  font-size:15px;
+
+.question-label {
+  display: flex;
+  align-items: center;
 }
-.question-number{
-  padding:0;
-  margin:0;
+
+.question-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
 }
-@media (max-width:370px) {
-  .question-container{
-    font-size:10px;
-  }
-  .question-text{
-    font-size: 15px;
-  }
-  .question-number{
-    font-size:16px;
-  }
-  .option-goto-container{
-    padding-top:60px;
-  }
+
+.question-number,
+.question-text {
+  color: #111827;
+  font-size: 1rem;
 }
-.question-button{
-  background-color:rgb(35, 186, 35);
-  color:white;
-  margin:0.5px;
+
+.question-number {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
 }
-.question-button:hover{
-  opacity:0.6;
+
+.question-button {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  margin: 0.25rem;
+  border: 1px solid #cbd5e1;
 }
-@media (max-width:412px){
-  .question-button{
-    margin:0;
-    font-weight: bold;
-    font-size:10px;
-  }
+
+.question-button:hover {
+  background-color: #dbeafe;
 }
-.question-button:active{
+
+.question-button:active {
   background-color: white;
-  color:black;
+  color: black;
 }
-.current-index{
-  background-color:rgb(15, 35, 165);
-  color:rgb(240, 238, 238);
-  box-shadow: gray 2px 2px 2px ;
-  border:solid 1px gray;
-  font-weight: bold;
+
+.current-index {
+  background-color: #2563eb;
+  color: #f8fafc;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.16);
+  border: 1px solid #1d4ed8;
+  font-weight: 700;
 }
-.is_answered{
-  background-color:rgb(61, 188, 234);
-  color:white;
+
+.is_answered {
+  background-color: #38bdf8;
+  color: white;
 }
-.last-index{
-  opacity:0.5;   
-  border:none;                              
+
+.last-index {
+  opacity: 0.65;
+  border: none;
 }
 
 

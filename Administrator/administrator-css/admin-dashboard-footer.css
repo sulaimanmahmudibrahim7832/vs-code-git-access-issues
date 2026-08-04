@@ -1,15 +1,17 @@
-.footer{
-  padding:0;
-  margin:0;
-  height:3vh;
+﻿.footer {
   position: fixed;
-border:solid 1px black;
-  bottom:2px;
-left:0;
-right:1px;
-display:flex;
-column-gap:20px;
-z-index:2;
-background-color: orange;
+  bottom: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  z-index: 5;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: 0.95rem;
 }
-

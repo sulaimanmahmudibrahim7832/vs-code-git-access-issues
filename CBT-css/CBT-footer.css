@@ -1,42 +1,57 @@
-.nav-container{
-  display:flex;
-  justify-content:space-between;
-  position:fixed;
-  left:2vw;
-  right:2vw;
-  bottom:0;
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border, #dbeafe);
 }
-.nav-container button{
-  padding:10px;
-  cursor:pointer;
-  border-radius:10px;
-}
-.nav-container button:hover{
-  opacity:0.7;
-}
-.nav-container button:active{
-  border:none;
-}
-.previous-button{
-  background-color:yellow;
 
+.nav-container button {
+  min-width: 110px;
+  height: 48px;
+  padding: 0 1rem;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
 }
-.next-button{
-  background-color:green;
-  color:white;
+
+.nav-container button:hover {
+  transform: translateY(-1px);
 }
-.goto-button{
-  background-color:orange;
+
+.previous-button {
+  background-color: #f8fafc;
+  color: var(--secondary, #1e293b);
+  border-color: var(--border, #dbeafe);
 }
-@media (max-width:420px){
-  .nav-container{
-    left:2.5vw;
-    right:2.5vw;
-    
+
+.next-button {
+  background-color: #2563eb;
+  color: white;
+}
+
+.goto-button {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.submit-button {
+  background-color: #0f766e;
+  color: white;
+}
+
+@media (max-width: 420px) {
+  .nav-container {
+    justify-content: flex-start;
   }
-  .nav-container button{
-    padding:5px;
-    font-weight:bold;
+
+  .nav-container button {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
   }
 }
 

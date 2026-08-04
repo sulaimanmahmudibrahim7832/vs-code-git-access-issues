@@ -1,210 +1,138 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student-dashboard</title>
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard.css">
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-header.css">
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-left.css">
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-footer.css">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
 </head>
 <body>
-    <header class="header-nav"> 
-      
-     <div class="system-brand">
-      <img class="logo-img" src="../data/Arewa-cbt.png">
-      <div>
-      Arewa CBT 
-      </div>
-     </div>
-     <div class="search-bar"> 
-      <input class="search-input" type="search" placeholder="Search "> <button 
-class="search-button">search</button> </div>
-
-   
+  <header class="header-nav">
+    <div class="system-brand">
+      <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+      <div>Arewa CBT</div>
+    </div>
+    <div class="search-bar">
+      <input class="search-input" type="search" placeholder="Search exams, results, or schedules" aria-label="Search dashboard">
+      <button class="search-button">Search</button>
+    </div>
     <div class="dashboard-title">
-         <div>
-           <img src="../Student/student-data/student-img.jpeg"> 
-         </div>
-         <div>Student</div>
+      <img src="../Student/student-data/student-img.jpeg" alt="Student profile image">
+      <div>Student</div>
     </div>
     <div class="event">
       <div>
-<img src="../data/upcoming.png">
-<div class="notification-message"> 10 </div>
+        <img src="../data/upcoming.png" alt="Upcoming exams">
+        <div class="notification-message">10</div>
       </div>
-     <div>
-      Physics Exam
-     </div> 
+      <div>Physics Exam</div>
     </div>
   </header>
-    <aside class="left-nav">
-          <div class="user-info">
-          <img class="user-img" src="../data/user-svgrepo-com.svg">
-         <span>User info</span>
-          </div>
-       <div class="create-exam">
-      <span>
-         <img class="exam-img" src="../data/exam-svgrepo-com (1).svg">
-       </span>
-         <span>
-          Exams 
-        </span>
-      </div>
-      <div class="set-schedule">
-    <img class="schedule-img" src="../data/schedule-svgrepo-com.svg">
-    Available Exam
-      </div>
-      <div class="results">
-         <img class="schedule-img" src="../data/result-svgrepo-com.svg">
-      view result
+  <aside class="left-nav">
+    <div class="user-info">
+      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="User avatar">
+      <span>Student</span>
     </div>
-    <div class="recent-activities">
-      <p>Recent Activities </p>
+    <nav class="sidebar-nav" aria-label="Student menu">
+      <a class="sidebar-item active" href="student.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Exam icon">
+        <span>Exams</span>
+      </a>
+      <a class="sidebar-item" href="E-Available.html">
+        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Available exam icon">
+        <span>Available exams</span>
+      </a>
+      <a class="sidebar-item" href="../Result/result.html">
+        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
+        <span>View results</span>
+      </a>
+    </nav>
+  </aside>
+  <main class="main-body">
+    <section class="dashboard-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Student Dashboard</p>
+        <h1>Ready to start your next exam?</h1>
+        <p>See your available exams, track your schedule, and access results with a dashboard designed for students.</p>
+      </div>
+      <img class="hero-image" src="../data/dashboard-4-svgrepo-com.svg" alt="Student dashboard overview illustration">
+    </section>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Available exams</h1>
+        <div class="button-row">
+          <a class="button-link secondary" href="E-Available.html">View all</a>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Subjects</th>
+              <th>Duration</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Friday</td>
+              <td>01/08/2026</td>
+              <td>Physics, Chemistry</td>
+              <td>2 hours</td>
+              <td>9:00am</td>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>02/08/2026</td>
+              <td>Mathematics</td>
+              <td>1 hour</td>
+              <td>10:00am</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>14/08/2026</td>
+              <td>English</td>
+              <td>45 minutes</td>
+              <td>8:15am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-</aside>
-<main>
-  <h1>Dashboard</h1>
-<h2>Welcome Abba Umar Lawal </h2>
-<!--<div class="card">
-  <div class="user-info">
-    
-<p>Name:Abba Umar Lawal </p>
-<p>Matric Number:dsck/21/c0035</p>
-</div>
-  </div>-->
-  <card>
-    <div class="profile-card">
-  
-<div class="profile-details">
-<img class="profile-img" src="../data/user-svgrepo-com.svg">
-<div>Username: abbaUmar5678</div>
-<p>Matric Number:dsck/21/c0035</p>
-</div>
-<div class="profile-action">
-<button>Edit profile</button>
-<button>Change Password</button>
-<button>Logout</button>
-</div>
-</div>
-  </card>
-<div class="card">
-<div class="availabel-exam">
-  <h4>Available Exam</h4> 
-     <table border="1px">
-     <thead>
-       <tr>
-         <th>
-           Day
-         </th>
-         <th>
-           Date
-         </th>
-         <th>
-           Subjects
-         </th>
-         <th>
-           Duration
-         </th>
-         <th>
-           time
-         </th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>
-           Friday
-         </td>
-         <td>
-           01/08/2026
-         </td>
-         <td>
-           physics <br>
-           chemistry
-         </td>
-         <td>
-           2 hours
-         </td>
-         <td>
-           9:00am
-         </td>
-         
-       </tr>
-          <tr>
-    <td>
-      Monday
-    </td>
-    <td>
-      02/08/2026
-    </td>
-    <td>
-      Mathematics
-    </td>
-    <td>
-      1 hour
-    </td>
-    <td>
-      10:00am
-    </td>
-    
-  </tr>
-     <tr>
-    <td>
-      Thursday
-    </td>
-    <td>
-      14/08/2026
-    </td>
-    <td>
-      English 
-    </td>
-    <td>
-      45 minutes
-    </td>
-    <td>
-      8:15am
-    </td>
-    
-  </tr>
-     </tbody>
-   </table>
- </div>
- <div><button>
-<a href="../Student/E-Available.html"> View all </a>  
-</button></div>
-</div>
-  <div class="card">
-  <div class="start-exam"> 
-<h4>Start</h4>
-<table border="1px">
-  <tbody>
-    <thead>
-      <tr>
-        <th>Subjects</th>
-        <th>Duration</th>
-        <th>time</th>
-      </tr>
-    </thead>
-    <tr>
-     <td>English <br> Mathematics </td>
-     <td>30 mins </td>
-     <td>9:00am</td>
-    </tr>
-  </tbody>
-</table>
-<button ><a href="../quiz.html" >Start</a></button>
-<button><a href="../Student/take-exam.html">Open</a></button>
-  </div>
-  </div> 
-
-</main>
-<footer class="footer">
-<div>Available Exams : 2</div>
-<div>
-  Total Registrated Student : 30
-</div>
-</footer>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Start Exam</h1>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Duration</th>
+              <th>Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>English, Mathematics</td>
+              <td>30 mins</td>
+              <td>9:00am</td>
+              <td><a class="button-link" href="../quiz.html">Start</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="button-row">
+        <a class="button-link secondary" href="take-exam.html">Open</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>Available exams: 2</div>
+    <div>Registered students: 30</div>
+  </footer>
 </body>
 </html>

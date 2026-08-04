@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Schedule</title>
+</head>
+<body>
+
+  <h1>Create Schedule</h1>
+ 
+ 
+ 
+
+ 
+ 
+  <div class="schedule-tample">
+    <table border="1px">
+      <thead>
+        <tr>
+          <th>
+            Day
+          </th>
+          <th>
+            Date
+          </th>
+          <th>
+            Subjects
+          </th>
+          <th>
+            Duration
+          </th>
+          <th>
+            time
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Friday
+          </td>
+          <td>
+            01/08/2026
+          </td>
+          <td>
+            physics <br>
+            chemistry
+          </td>
+          <td>
+            2 hours
+          </td>
+          <td>
+            9:00am
+          </td>
+          
+        </tr>
+           <tr>
+     <td>
+       Monday
+     </td>
+     <td>
+       02/08/2026
+     </td>
+     <td>
+       Mathematics
+     </td>
+     <td>
+       1 hour
+     </td>
+     <td>
+       10:00am
+     </td>
+     
+   </tr>
+      <tr>
+     <td>
+       Thursday
+     </td>
+     <td>
+       14/08/2026
+     </td>
+     <td>
+       English 
+     </td>
+     <td>
+       45 minutes
+     </td>
+     <td>
+       8:15am
+     </td>
+     
+   </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class="create-schedule">
+  <label>Day:</label> <input type="text" placeholder="day">
+  <br>
+  <label>Date:</label> <input type="date" >
+  <br>
+  <label>Subjects:</label><input placeholder="subject"> <button>Add</button>
+  <br>
+  <label>Duration:</label> <input type="text" placeholder="duration">
+  <br>
+  <label>Time:</label> <input type="time" placeholder="day">
+  </div>
+  <button>Add to schedule</button>
+  <button>Publish</button>
+</body>
+</html>

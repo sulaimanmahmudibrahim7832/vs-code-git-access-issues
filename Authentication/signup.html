@@ -3,9 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-up</title>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
 </head>
-<body>
-  
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-grid">
+      <div class="auth-intro">
+        <div class="auth-header">
+          <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+          <div>
+            <h1>Create your account</h1>
+            <p>Register as a student or administrator to manage exams, schedules, and results with one easy dashboard.</p>
+          </div>
+        </div>
+        <p class="auth-note">Student accounts require a matric number. Admin registration is reserved for authorized personnel. Passwords should be at least 8 characters long.</p>
+      </div>
+
+      <form action="#" method="post" class="auth-form">
+        <div class="role-selector">
+          <label><input type="radio" name="accountType" value="student" checked> Student</label>
+          <label><input type="radio" name="accountType" value="admin"> Admin</label>
+        </div>
+
+        <div class="auth-row">
+          <label>
+            First name
+            <input type="text" name="firstName" placeholder="First name" required>
+          </label>
+          <label>
+            Middle name
+            <input type="text" name="middleName" placeholder="Middle name">
+          </label>
+        </div>
+
+        <div class="auth-row">
+          <label>
+            Surname
+            <input type="text" name="surname" placeholder="Surname" required>
+          </label>
+          <label>
+            Username
+            <input type="text" name="username" placeholder="Choose a username" required>
+          </label>
+        </div>
+
+        <label>
+          Matric number (student only)
+          <input type="text" name="matricNumber" placeholder="Enter matric number">
+        </label>
+
+        <div class="auth-row">
+          <label>
+            Password
+            <input type="password" name="password" placeholder="Create a password" required>
+          </label>
+          <label>
+            Confirm password
+            <input type="password" name="confirmPassword" placeholder="Confirm password" required>
+          </label>
+        </div>
+
+        <div class="auth-actions">
+          <button type="submit">Create account</button>
+          <span class="auth-note">Already have an account? <a href="login.html">Login here</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

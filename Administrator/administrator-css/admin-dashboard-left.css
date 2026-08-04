@@ -1,43 +1,67 @@
-:root{
---aside-bg:#1e293b;
---aside-text:#f8fafc;
---aside-icon:#d2cacab4;
---aside-hover:#334155;
---aside-active:#3357a6;
-
+﻿:root {
+  --aside-bg: #1e293b;
+  --aside-text: #f8fafc;
+  --aside-hover: #334155;
+  --aside-active: #3357a6;
 }
-aside{
-  display:flex;
+
+aside {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  display: flex;
   flex-direction: column;
- height:86vh;
- width:22vw;
- position:fixed;
- background-color:var(--aside-bg);
- color:var(--aside-text);
- justify-content:top;
- align-items: left;
-cursor:pointer;
-margin-top:11vh;
-z-index:1;
-top:0;
+  background-color: var(--aside-bg);
+  color: var(--aside-text);
+  padding: 1rem 0.75rem;
+  gap: 0.75rem;
+  overflow-y: auto;
+  z-index: 5;
 }
-aside div{
+
+aside > div,
+aside nav > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0.9rem;
+  border-radius: calc(var(--button-radius) / 1.15);
   background-color: rgb(47, 105, 158);
-  margin-top:8px;
-  display:grid;
+  cursor: pointer;
 }
 
-aside img{
-  background-color: #d2cacab4;
-  border-radius: 25px;
-
-}
-aside div:hover{
+aside > div:hover,
+aside nav > div:hover {
   background-color: var(--aside-hover);
 }
-aside div:active{
+
+aside > div:active,
+aside nav > div:active {
   background-color: var(--aside-active);
 }
-.user-info{
+
+.user-info {
   background-color: var(--aside-active);
+}
+
+aside img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+aside nav {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  aside {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
 }

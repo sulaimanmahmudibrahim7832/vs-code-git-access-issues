@@ -1,159 +1,144 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administrator Create Exam</title>
-  <link rel="stylesheet" href="../Administrator/main-content/main-header.css">
+  <link rel="stylesheet" href="administrator-css/dashboard-shared.css">
 </head>
 <body>
-   <header>
-   <div class="left-section">
-       Left -section 
-   </div>
-   <div class="middle-section">
-     Middle -section 
-   </div>
-   <div class="right-section">
-    Right - section 
-   </div>
- </header>
- <aside>
-  Data 
- </aside>
-<main>
-    <h1>Create Exam </h1>
-    
-  <div class="Exam-info">
-    <div class="exam-template">
-  <label>Exam-title:<span>Test</span></label>
-  <br>
-  <label>Exam Duration: <span>2 Hours</span> </label>
+  <header class="header-nav">
+    <div class="system-brand">
+      <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+      <div>Arewa CBT</div>
     </div>
-    <br>
-    <label>Examination Title</label>
-<input type="text" placeholder="Title">
-<br>
-<br>
-<label>Exam Duration:</label>
-<input type="text" placeholder="Duration">
-<br>
-<button>Save</button>
-  </div>
-    <h3>Manage-courses/subjects</h3>
-  <div class="course-info">
-    <div class="course-contents">
-      <div class="template">
-        <table border="1px">
+    <div class="search-bar">
+      <input class="search-input" type="search" placeholder="Search exams, schedules, or subjects" aria-label="Search dashboard">
+      <button class="search-button">Search</button>
+    </div>
+    <div class="dashboard-title">
+      <img src="../data/admin-title-img.png" alt="Administrator icon">
+      <div>Create Exam</div>
+    </div>
+    <div class="event">
+      <div>
+        <img src="../data/upcoming.png" alt="Upcoming exam">
+        <div class="notification-message">3</div>
+      </div>
+      <div>Exam builder</div>
+    </div>
+  </header>
+  <aside class="left-nav">
+    <div class="user-info">
+      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Admin avatar">
+      <span>Admin</span>
+    </div>
+    <nav class="sidebar-nav" aria-label="Admin menu">
+      <a class="sidebar-item active" href="createExam.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
+        <span>Create exam</span>
+      </a>
+      <a class="sidebar-item" href="schedule.html">
+        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
+        <span>Schedules</span>
+      </a>
+      <a class="sidebar-item" href="../Result/result.html">
+        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
+        <span>Results</span>
+      </a>
+    </nav>
+  </aside>
+  <main class="main-body">
+    <div class="page-heading">
+      <h1>Create Exam</h1>
+      <div class="button-row">
+        <button>Save Draft</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="exam-template">
+        <label>Exam title<input type="text" placeholder="Enter exam title"></label>
+        <label>Duration<input type="text" placeholder="e.g. 90 minutes"></label>
+        <label>Total questions<input type="number" placeholder="Number of questions"></label>
+      </div>
+      <div class="button-row">
+        <button class="secondary">Preview</button>
+        <button>Save exam</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Course selection</h1>
+      </div>
+      <div class="course-contents table-responsive">
+        <table>
           <thead>
             <tr>
-              <th>
-                S/N
-              </th>
-              <th>
-                Courses
-              </th>
+              <th>S/N</th>
+              <th>Course</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                1
-              </td>
-              <td>
-                Mathematics
-              </td>
+              <td>1</td>
+              <td>Mathematics</td>
             </tr>
             <tr>
-                <td>
-                  2
-                </td>
-                <td>
-                  English
-                </td>
+              <td>2</td>
+              <td>English</td>
             </tr>
             <tr>
               <td>3</td>
               <td>Chemistry</td>
             </tr>
             <tr>
-              <td>
-                4
-              </td>
-              <td>
-                Physics
-              </td>
+              <td>4</td>
+              <td>Physics</td>
             </tr>
           </tbody>
         </table>
       </div>
-<br>
- <label>Course Title:</label> <input type="text" placeholder="title">
- <br>
-<button>Add Course</button>
-<br>
-<br>
+      <div class="create-schedule">
+        <label>Course title<input type="text" placeholder="New course title"></label>
+        <button>Add course</button>
+      </div>
     </div>
-
-
-     <div class="questions-template">
-      <select>
-        <option>Mathematics</option>
-        <option>English</option>
-        <option>Chemistry</option>
-        <option>Physics</option>
-      </select>
-      <p>Course:Mathematics</p>
-    <div>Q1. the product of 2^2  and 3^2; is ? </div>
-    <div>
-      <span>A) 36 </span>
-      <br>
-      <span>B) 56</span>
-      <br>
-      <span>C) 78</span>
-      <br>
-      <span>D) 100</span>
-    </div>
-    <br> 
-     <div>Q2. square root of 81 is ____ while 1/8 is equal to ____  </div>
- <div>
-   <span>A) 9 and 0.25 </span>
-   <br>
-   <span>B) 0.125 and 9</span>
-   <br>
-   <span>C) 13 and 0.125</span>
-   <br>
-   <span>D) 9 and 0.125 </span>
- </div>
-     </div>
-     <br>
-   <div class="questions">
-
-
-    <label>Questions:</label> <input type="text" placeholder="question">
-     <br>
-     <br>
-    <label>option A:</label> <input class="optionA" type="text" 
-placeholder="Option A">
-          <br>
-        <label>option B:</label> <input class="optionB" type="text" 
-placeholder="Option B">
-        <br>
-        <label>option C:</label> <input class="OptionC" type="text" 
-placeholder="Option C">
-        <br>
-        <label>option D:</label> <input class="OPtionD" type="text" 
-placeholder="Option D">
-        <br>
+    <div class="card">
+      <div class="page-heading">
+        <h1>Questions</h1>
+      </div>
+      <div class="questions-template">
+        <select>
+          <option>Mathematics</option>
+          <option>English</option>
+          <option>Chemistry</option>
+          <option>Physics</option>
+        </select>
+        <div class="muted">Course: Mathematics</div>
+        <p>Q1. The product of 2² and 3² is?</p>
+        <div>
+          <span>A) 36</span><br>
+          <span>B) 56</span><br>
+          <span>C) 78</span><br>
+          <span>D) 100</span>
+        </div>
+      </div>
+      <div class="questions">
+        <label>Question<input type="text" placeholder="Question text"></label>
+        <label>Option A<input type="text" placeholder="Option A"></label>
+        <label>Option B<input type="text" placeholder="Option B"></label>
+        <label>Option C<input type="text" placeholder="Option C"></label>
+        <label>Option D<input type="text" placeholder="Option D"></label>
         <button>Add question</button>
-
-
-   </div>
-<button class="add-to-schedule">
-Add to schedule 
-</button>
-   
-  </div>
-</main>
+      </div>
+    </div>
+    <div class="button-row">
+      <button class="secondary">Add to schedule</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>Published exams: 2</div>
+    <div>Total students: 30</div>
+  </footer>
 </body>
 </html>

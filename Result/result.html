@@ -3,115 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Result</title>
+  <title>Exam Results</title>
+  <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
 </head>
 <body>
-  <h1>Exam result</h1>
-  <div class="resut-lists">
-    <h4>  Students' result for 2026 Objective Exam </h4>
-    <table border="1px">
-      <thead>
-      <tr>
-        <th>
-          S/N
-        </th>
-        <th>
-          Name
-        </th>
-        <th>
-          Metric Number 
-        </th>
-        <th>
-          Total
-        </th>
-        <th>
-          Action
-        </th>
-      </tr>
-      </thead>
-         <tbody>
-   <tr>
-     <td>
-       1
-     </td>
-     <td>
-       Abbas Gambo Lawal 
-     </td>
-     <td>
-       DSK/30
-     </td>
-     <td>
-       250
-     </td>
-     <td>
-       <button>view</button>
-     </td>
-   </tr>
-    <tr>
-   <td>
-     2
-   </td>
-   <td>
-     Faiz TIjjani
-   </td>
-   <td>
-     DSK/32
-   </td>
-   <td>
-     243
-   </td>
-   <td>
-     <button>view</button>
-   </td>
-   </tbody>
-    </table>
-    <div class="result-card-template">
-  <div class="student-info">
-<P>Name: Sulaiman Mahmud Ibrahim </P>
-<p>Matric Number: 7832</p>
-<table border="1px">
-<thead>
-  <tr>
-    <th>
-      Subjects 
-    </th>
-    <th>
-      Marks
-    </th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>
-      Mathematics 
-    </td>
-    <td>
-      64
-      </td>
-  </tr>
-  <tr>
-    <td>
-      English
-    </td>
-    <td>
-      46
-    </td>
-  </tr>
-  <tr>
-    <td>Physics</td>
-    <td>69</td>
-  </tr>
-  <tr>
-    <td>Chemistry</td>
-    <td>71</td>
-  </tr>
-  <tr>
-    <th>Total</th>
-    <th>250</th>
-  </tr>
-</tbody>
-</table>
-</div>
+  <header class="header-nav">
+    <div class="system-brand">
+      <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+      <div>Arewa CBT</div>
     </div>
+    <div class="search-bar">
+      <input class="search-input" type="search" placeholder="Search results, students, or exams" aria-label="Search results">
+      <button class="search-button">Search</button>
+    </div>
+    <div class="dashboard-title">
+      <img src="../data/admin-title-img.png" alt="Results icon">
+      <div>Exam Results</div>
+    </div>
+    <div class="event">
+      <div>
+        <img src="../data/upcoming.png" alt="Result summary icon">
+        <div class="notification-message">12</div>
+      </div>
+      <div>Reviewed results</div>
+    </div>
+  </header>
+  <aside class="left-nav">
+    <div class="user-info">
+      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Admin avatar">
+      <span>Admin</span>
+    </div>
+    <nav class="sidebar-nav" aria-label="Results menu">
+      <a class="sidebar-item" href="../Administrator/admin.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Dashboard icon">
+        <span>Dashboard</span>
+      </a>
+      <a class="sidebar-item" href="../Administrator/createExam.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
+        <span>Create exam</span>
+      </a>
+      <a class="sidebar-item" href="../Administrator/schedule.html">
+        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
+        <span>Schedules</span>
+      </a>
+      <a class="sidebar-item active" href="result.html">
+        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
+        <span>Results</span>
+      </a>
+    </nav>
+  </aside>
+  <main class="main-body">
+    <div class="page-heading">
+      <h1>Student Results</h1>
+      <div class="button-row">
+        <button class="secondary">Export</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="page-heading">
+        <h1>Latest result summary</h1>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Name</th>
+              <th>Matric Number</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Abbas Gambo Lawal</td>
+              <td>DSK/30</td>
+              <td>250</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Faiz Tijani</td>
+              <td>DSK/32</td>
+              <td>243</td>
+              <td><button>View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="page-heading">
+        <h1>Individual result preview</h1>
+      </div>
+      <div class="student-info">
+        <p><strong>Name:</strong> Sulaiman Mahmud Ibrahim</p>
+        <p><strong>Matric Number:</strong> DSK/7832</p>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mathematics</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td>46</td>
+            </tr>
+            <tr>
+              <td>Physics</td>
+              <td>69</td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td>71</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <th>250</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>Total students: 120</div>
+    <div>Average score: 72%</div>
+  </footer>
 </body>
 </html>

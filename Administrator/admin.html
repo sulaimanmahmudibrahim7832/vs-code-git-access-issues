@@ -5,32 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administrator Dashboard</title>
   
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard.css">
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-header.css">
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-left.css">
-  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard-footer.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
 </head>
 <body>
   <header class="header-nav"> 
       
      <div class="system-brand">
-      <img class="logo-img" src="../data/Arewa-cbt.png">
+     <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
       <div>
       Arewa CBT 
       </div>
      </div>
      <div class="search-bar"> 
-      <input class="search-input" type="search" placeholder="Search "> <button class="search-button">search</button> </div>
-   
+      <input class="search-input" type="search" placeholder="Search exams, schedules, or results" aria-label="Search dashboard"> <button class="search-button">Search</button> </div>
+      
+      
     <div class="dashboard-title">
          <div>
-           <img src="../data/admin-title-img.png"> 
+           <img src="../data/admin-title-img.png" alt="Administrator icon"> 
          </div>
          <div>Admin</div>
-    </div>
-    <div class="event">
+    </div>    <div class="event">
       <div>
-<img src="../data/upcoming.png">
+<img src="../data/upcoming.png" alt="Upcoming exams">
 <div class="notification-message"> 10 </div>
       </div>
      <div>
@@ -40,37 +37,47 @@
   </header>
   <aside class="left-nav">
           <div class="user-info">
-          <img class="user-img" src="../data/user-svgrepo-com.svg">
+         <img class="user-img" src="../data/user-svgrepo-com.svg" alt="User avatar">
          <span>User info</span>
           </div>
-       <div class="create-exam">
-      <span>
-         <img class="exam-img" src="../data/exam-svgrepo-com (1).svg">
-       </span>
-         <span>
-          create exam
-        </span>
-      </div>
-      <div class="set-schedule">
-    <img class="schedule-img" src="../data/schedule-svgrepo-com.svg">
-    Set schedules
-      </div>
-      <div class="results">
-         <img class="schedule-img" src="../data/result-svgrepo-com.svg">
-      view result
-    </div>
+      <nav class="sidebar-nav" aria-label="Administrator menu">
+      <a class="sidebar-item active" href="admin.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Dashboard icon">
+        <span>Dashboard</span>
+      </a>
+      <a class="sidebar-item" href="createExam.html">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
+        <span>Create exam</span>
+      </a>
+      <a class="sidebar-item" href="schedule.html">
+        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
+        <span>Set schedules</span>
+      </a>
+      <a class="sidebar-item" href="../Result/result.html">
+        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
+        <span>View result</span>
+      </a>
     <div class="recent-activities">
       <p>Recent Activities </p>
     </div>
+      </nav>
 </aside>
 <main class="main-body">
- 
+  <section class="dashboard-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Administrator Dashboard</p>
+      <h1>Manage exams, schedules, and results in one place</h1>
+      <p>Keep a clear view of current exams and upcoming schedules so every student and exam runs smoothly.</p>
+    </div>
+    <img class="hero-image" src="../data/dashboard-4-svgrepo-com.svg" alt="Dashboard overview illustration">
+  </section>
+
   <div class="card">
  <h2>Welcome  Sulaiman Mahmud Ibrahim</h2>
 <div class="profile-card">
   
 <div class="profile-details">
-<img class="profile-img" src="../data/user-svgrepo-com.svg">
+<img class="profile-img" src="../data/user-svgrepo-com.svg" alt="Admin profile picture">
 <div>Username: Sulaiman6789</div>
 </div>
 <div class="profile-action">
