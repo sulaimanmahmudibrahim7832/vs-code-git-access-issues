@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administrator Create Exam</title>
+  <title> Create Exam</title>
   <link rel="stylesheet" href="administrator-css/dashboard-shared.css">
 </head>
 <body>
@@ -51,6 +51,34 @@
   <main class="main-body">
     <div class="page-heading">
       <h1>Create Exam</h1>
+      <div class="card">
+        <h2> Exam preview </h2>
+         <div class="prview-contents table-responsive" >
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Duration:</th>
+                <th>Total Questions </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  First Monthly Test
+                </td>
+                <td>
+                  3 hourse, 45 minutes
+                </td>
+                <td>120</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button-row">
+            <button class="secondary">View</button>
+          </div>
+         </div>
+      </div>
       <div class="button-row">
         <button>Save Draft</button>
       </div>
@@ -58,7 +86,17 @@
     <div class="card">
       <div class="exam-template">
         <label>Exam title<input type="text" placeholder="Enter exam title"></label>
-        <label>Duration<input type="text" placeholder="e.g. 90 minutes"></label>
+        <label>Duration
+          <div class="time-inputs">
+              <select class="h-select">
+              </select>
+               <select class="m-select">
+              </select>
+               <select class="s-select">
+              </select>
+           </div>
+          <!--<input type="text" placeholder="e.g. 90 minutes">-->
+        </label>
         <label>Total questions<input type="number" placeholder="Number of questions"></label>
       </div>
       <div class="button-row">
@@ -129,16 +167,52 @@
         <label>Option B<input type="text" placeholder="Option B"></label>
         <label>Option C<input type="text" placeholder="Option C"></label>
         <label>Option D<input type="text" placeholder="Option D"></label>
+        <label >Correct Option<select> 
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+        </select>  </label>
         <button>Add question</button>
       </div>
     </div>
-    <div class="button-row">
-      <button class="secondary">Add to schedule</button>
+    <div class="card">
+      <div class="plan-publish  table-responsive">
+         <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Subjects</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                First Monthly Test
+              </td>
+              <td> 
+               Mathematics,Engilish,Physics,Chemistry
+              </td>
+              <td>3 hours, 45 minutes</td>
+            </tr>
+          </tbody>
+         </table>
+      </div>
+       <div class="button-row">
+         <button class="secondary">Add to schedule</button>
+      <a href="../Administrator/schedule.html">
+         <button class="secondary">Visit schedule</button>
+      </a>
+       </div>
     </div>
   </main>
   <footer class="footer">
     <div>Published exams: 2</div>
     <div>Total students: 30</div>
   </footer>
+  <script src="../Administrator/utility/utility.js">
+
+  </script>
 </body>
 </html>

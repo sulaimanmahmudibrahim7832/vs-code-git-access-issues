@@ -58,6 +58,8 @@
     <div class="card">
       <div class="page-heading">
         <h1>Upcoming schedules</h1>
+         <label>Title : <span>First Monthly Test </span> </label>
+         <label>Total Duration : <span>3 hours, 45 minutes </span> </label>
       </div>
       <div class="table-responsive">
         <table>
@@ -74,9 +76,16 @@
             <tr>
               <td>Friday</td>
               <td>01/08/2026</td>
-              <td>Physics, Chemistry</td>
-              <td>2 hours</td>
+              <td>Physics</td>
+              <td>1 hour</td>
               <td>9:00am</td>
+                </tr>
+            <tr>
+              <td>Friday</td>
+              <td>01/08/2026</td>
+              <td>Physics</td>
+              <td>1 hour</td>
+              <td>10:00am</td>
             </tr>
             <tr>
               <td>Monday</td>
@@ -94,27 +103,103 @@
             </tr>
           </tbody>
         </table>
+        <div class="button-row"> 
+         <button class="secondary" >
+          Edit 
+         </button>
+        </div>
       </div>
     </div>
     <div class="card">
       <div class="page-heading">
         <h1>Create schedule</h1>
       </div>
+      <div class="card">
+        <h2>Preview schedule</h2>
+          <div class="plan-publish  table-responsive">
+             <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Date</th>
+                  <th>Subjects</th>
+                  <th>Duration</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Tuesday
+                  </td>
+                  <td>
+                    19/08/2026
+                  </td>
+                  <td> 
+                   Mathematics
+                  </td>
+                  <td>1 hour</td>
+                  <td>3:00pm</td>
+                </tr>
+              </tbody>
+             </table>
+          </div>
+           <div class="button-row">
+          <button class="secondary">Add to Upcoming events</button>
+          <button class="secondary"> Edit </button>
+           </div>
+        </div>
       <div class="create-schedule">
-        <label>Day<input type="text" placeholder="Day"></label>
+        <label>Day<select>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select></label>
         <label>Date<input type="date"></label>
-        <label>Subjects<input type="text" placeholder="Subject"></label>
-        <label>Duration<input type="text" placeholder="Duration"></label>
+        <label>Subjects
+          <select>
+            <option>
+              Mathematics
+            </option>
+            <option>
+              English
+            </option>
+            <option>
+              Chemistry
+            </option>
+            <option>
+              Physics
+            </option>
+          </select>
+        </label>
+        <label>Duration
+          <div class="time-inputs">
+                <select class="h-select">
+                </select>
+                 <select class="m-select">
+                </select>
+                 <select class="s-select">
+                </select>
+          </div>
+           <!--<input type="text" placeholder="Duration">-->
+        </label>
         <label>Time<input type="time"></label>
       </div>
       <div class="button-row">
         <button>Save schedule</button>
       </div>
     </div>
-  </main>
+    </main>
   <footer class="footer">
     <div>Planned schedules: 3</div>
     <div>Active exams: 5</div>
   </footer>
+  <script  src="../Administrator/utility/utility.js">
+
+  </script>
 </body>
 </html>
