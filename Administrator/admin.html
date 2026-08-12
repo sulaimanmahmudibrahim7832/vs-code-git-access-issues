@@ -41,23 +41,23 @@
          <span>User info</span>
           </div>
       <nav class="sidebar-nav" aria-label="Administrator menu">
-      <a class="sidebar-item active" href="admin.html">
+         <div class="dashboard-card">
         <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Dashboard icon">
         <span>Dashboard</span>
-      </a>
-      <a class="sidebar-item" href="createExam.html">
+         </div>
+      <div class="create-exam-card">
         <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
-        <span>Create exam</span>
-      </a>
-      <a class="sidebar-item" href="schedule.html">
+        <span>Create exam</span> 
+      </div>
+     <div class="set-schedule-card">
         <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
         <span>Set schedules</span>
-      </a>
-      <a class="sidebar-item" href="../Result/result.html">
+      </div>
+      <div class="view-result-card">
         <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
         <span>View result</span>
-      </a>
-    <div class="recent-activities">
+      </div>
+    <div class="recent-activities-card">
       <p>Recent Activities </p>
     </div>
       </nav>
@@ -81,9 +81,9 @@
 <div>Username: Sulaiman6789</div>
 </div>
 <div class="profile-action">
-<button>Edit profile</button>
-<button>Change Password</button>
-<button>Logout</button>
+<button class="edit-profile-button">Edit profile</button>
+<button class="change-password-button">Change Password</button>
+<button class="logout-button">Logout</button>
 </div>
 <div class="profile-preview">
   <div class="image-input"> 
@@ -92,20 +92,23 @@
   <div class="inputs">
   <lable>Username: <input placeholder="User Name" ></lable>
 
-  <button>Save </button>
-  <button>Delete Account</button>
+  <button class="profile-name-save-button">Save </button>
+  <button class="prifile-name-back-button">Back</button>
+  <button class="profile-delete-account-button">Delete Account</button>
   </div>
   <div class="personalisation">
     <label>First name <input type="text" placeholder="Khamisu"></label>
     <label>Middle name <input type="text" placeholder="Isah"></label>
     <label>Last name <input type="text" placeholder="zungur "> </label>
-    <button>Save</button>
+    <button class="personalisatiob-save-button">Save</button>
+    <button class="personalisation-back">Back</button>
   </div>
   <div class="password-card">
     <label > Enter old password: <input type="password" placeholder="old password"> </label>
      <label > create new password: <input type="password" placeholder="new"> </label>
       <label > confirm  password: <input type="password" placeholder="confirm"></label>
-      <button>Save</button>
+      <button class="password-save">Save</button>
+      <button class="password-back">Back</button>
   </div>
 </div>
 </div>
@@ -171,7 +174,7 @@
   Total Registrated Student : 30
 </div>
 </footer>
-<script>
+<script src="..//Administrator/administrator-js/admin-ui.js">
   
 </script>
 </body>

@@ -4,7 +4,6 @@
   --aside-hover: #334155;
   --aside-active: #3357a6;
 }
-
 aside {
   position: fixed;
   top: var(--header-height);
