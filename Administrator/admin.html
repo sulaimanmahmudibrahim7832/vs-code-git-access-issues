@@ -6,6 +6,7 @@
   <title>Administrator Dashboard</title>
   
   <link rel="stylesheet" href="../Administrator/administrator-css/dashboard-shared.css">
+  <link rel="stylesheet" href="../Administrator/administrator-css/admin-dashboard.css">
 </head>
 <body>
   <header class="header-nav"> 
@@ -79,29 +80,24 @@
 <div class="profile-details">
 <img class="profile-img" src="../data/user-svgrepo-com.svg" alt="Admin profile picture">
 <div>Username: Sulaiman6789</div>
-</div>
 <div class="profile-action">
 <button class="edit-profile-button">Edit profile</button>
 <button class="change-password-button">Change Password</button>
 <button class="logout-button">Logout</button>
 </div>
-<div class="profile-preview">
-  <div class="image-input"> 
-   <lable> Profile picture : <input type="file" ></lable>
-  </div>
-  <div class="inputs">
-  <lable>Username: <input placeholder="User Name" ></lable>
+</div>
 
+<div class="profile-preview">
+  <div class="profile-form"> 
+    <img class="profile-img img-form" src="../data/user-svgrepo-com.svg" alt="Admin profile picture">
+   <lable> Profile picture : <input type="file" ></lable>
+  <lable>Username: <input placeholder="User Name" ></lable>     
+    <label>First name <input type="text" placeholder="Khamisu"></label>
+    <label>Middle name <input type="text" placeholder="Isah (optional)"></label>
+    <label>Last name <input type="text" placeholder="zungur (optional) "> </label>
   <button class="profile-name-save-button">Save </button>
   <button class="prifile-name-back-button">Back</button>
   <button class="profile-delete-account-button">Delete Account</button>
-  </div>
-  <div class="personalisation">
-    <label>First name <input type="text" placeholder="Khamisu"></label>
-    <label>Middle name <input type="text" placeholder="Isah"></label>
-    <label>Last name <input type="text" placeholder="zungur "> </label>
-    <button class="personalisatiob-save-button">Save</button>
-    <button class="personalisation-back">Back</button>
   </div>
   <div class="password-card">
     <label > Enter old password: <input type="password" placeholder="old password"> </label>
