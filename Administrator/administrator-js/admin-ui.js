@@ -1,5 +1,5 @@
 
-const adminMenu = document.querySelectorAll(".left-nav div");
+const menu = document.querySelectorAll(".menu div");
 const user_info = document.querySelector(".profile-card");
 const dashboard = document.querySelector(".dashboard-hero");
 const create_exam = document.querySelector(".exam-card");
@@ -37,80 +37,76 @@ passwordCard.style.display = "none";
 editProfBtn.addEventListener("click", () => {
   editState = true;
   backState = false;
-
-  if (editState) {
-    profileCard.style.display = "none";
-    profileFrom.style.display = "block";
-
-  } else if (backState) {
-    profileCard.style.display = "block";
-    profileFrom.style.display = "none";
-  }
-
+  editSwitch();
 });
 BackBtn.addEventListener("click", () => {
   editState = false;
   backState = true;
-      if (editState) {
-      profileCard.style.display = "none";
-      profileFrom.style.display = "block";
-    } else if (backState) {
-      profileCard.style.display = "block";
-      profileFrom.style.display = "none";
-    }
+  editSwitch();
 });
 changePsBtn.addEventListener("click", () => {
   passwordState = true;
   backPState = false;
-
-
-  if (passwordState) {
-    profileCard.style.display = "none";
-    passwordCard.style.display = "block";
-
-
-  } else if (backPState) {
-    profileCard.style.display = "block";
-    passwordCard.style.display = "none";
-  }
-
-
+  changePSwitch();
 });
 
 paswBack.addEventListener("click", () => {
    passwordState = false;
  backPState = true;
- if (passwordState) {
-   profileCard.style.display = "none";
-   passwordCard.style.display = "block";
- } else if (backPState) {
-   profileCard.style.display = "block";
-   passwordCard.style.display = "none";
- }
+ changePSwitch();
 });
 
-//
 
+
+function editSwitch() {
+        if (editState) {
+             profileCard.style.display = "none";
+             profileFrom.style.display = "block";
+    } else if (backState) {
+        profileCard.style.display = "block";
+        profileFrom.style.display = "none";
+    }
+}
+function changePSwitch() {
+  if (passwordState) {
+  profileCard.style.display = "none";
+  passwordCard.style.display = "block";
+} else if (backPState) {
+  profileCard.style.display = "block";
+  passwordCard.style.display = "none";
+}
+}
+
+//
+const profileImgInput = document.querySelector(".profile-img-input");
+const profileImg = document.querySelector(".img-form");
+const profileImg2 = document.querySelector(".img-form2");
+ profileImgInput.addEventListener("change", e => {
+  let files = e.target.files;
+  file = URL.createObjectURL(files[0]);
+   profileImg.src = file;
+   profileImg2.src = file;
+});
 function controlUI() {
   const cards = [user_info, dashboard, create_exam, set_schedule, view_result, recent_activities];
-  let initial_ = adminMenu[0].classList.add("active-button");
+  let initial_ = menu[0].classList.add("active-button");
   let initial_card = user_info.style;
 
   cards.forEach(card => {
     card.style.display = "none";
   });
-  initial_card.display = "grid";
-  adminMenu.forEach(menu => {
-    menu.addEventListener("click", () => {
-      adminMenu.forEach(btn => {
+
+  menu.forEach(tab => {
+    tab.addEventListener("click", () => {
+      menu.forEach(btn => {
         btn.classList.remove("active-button");
       });
-      menu.classList.add("active-button");
+      tab.classList.add("active-button");
       cards.forEach(card => {
         card.style.display = "none";
       });
-      for (let i = 0; i < adminMenu.length; i++) {
-        if (adminMenu[i].classList.contains("active-button")) {
+      for (let i = 0; i < menu.length; i++) {
+        if (menu[i].classList.contains("active-button")) {
           cards[i].style.display = "grid";
         }
  
