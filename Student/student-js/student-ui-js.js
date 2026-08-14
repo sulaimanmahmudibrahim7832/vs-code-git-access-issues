@@ -1,22 +1,2 @@
-
-
-const menu = document.querySelectorAll(".menu div");
-let initial_ = menu[0].classList.add("active-button");
-
-
-
-
-renderLeftNav(initial_,menu);
-
-
-function renderLeftNav(intitial_,menu) {
-
-menu.forEach(tab => {
-  tab.addEventListener("click", btn => {
-    menu.forEach(tab => {
-      tab.classList.remove("active-button");
-    });
-    tab.classList.add("active-button");
-  });
-});
-}
+import { menu, tab1, tab2, tab3, tab4, tab5,render_pageUi } from  "../../Administrator/utility/utility.js";
+render_pageUi(menu, tab1, tab2, tab3, tab4, tab5);

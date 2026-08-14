@@ -1,4 +1,85 @@
- let s_format = "second";
+const menu = document.querySelectorAll(".menu div");
+const tab1 = document.querySelector(".tab1");
+const tab2 = document.querySelector(".tab2");
+const tab3 = document.querySelector(".tab3");
+const tab4 = document.querySelector(".tab4");
+const tab5 = document.querySelector(".tab5");
+
+export { render_pageUi,menu,tab1,tab2,tab3,tab4,tab5}
+function render_pageUi(menu, tab1, tab2, tab3, tab4, tab5) {
+  const cards = [tab1,tab2,tab3,tab4,tab5];
+  let initial_ = menu[0].classList.add("active-button");
+
+  cards.forEach(card => {
+    card.style.display = "none";
+  });
+
+  cards[0].style.display = "grid";
+  menu.forEach(tab => {
+    // nav control function
+    tab.addEventListener("click", () => {
+      menu.forEach(btn => {
+        btn.classList.remove("active-button");
+      });
+      tab.classList.add("active-button");
+      // card renderation function 
+    
+      cards.forEach(card => {
+        card.style.display = "none";
+      });
+      for (let i = 0; i < menu.length; i++) {
+        if (menu[i].classList.contains("active-button")) {
+          cards[i].style.display = "grid";
+        }
+ 
+      }
+    });
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let s_format = "second";
  let s_Opthtml = "";
  const seconds = [];
  let m_format = "second";
@@ -46,3 +127,5 @@ hours.forEach(element => {
 const time_input = document.querySelector(".time-inputs");
 time_input.style.display = "flex";
 time_input.style.width = "430px";
+
+*/;

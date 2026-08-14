@@ -34,26 +34,40 @@
     
     
     <nav class="sidebar-nav" aria-label="Student menu">
-      <div class="user-info tab1">
+      <div class="user-info">
   <img class="user-img" src="../data/user-svgrepo-com.svg" alt="User avatar">
   <span>Student</span>
   </div>
-       <div class="tab2">
+           <div class="dashboard-card">
+        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Dashboard icon">
+        <span>Dashboard</span>
+         </div>
+       <div>
         <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Exam icon">
         <span>Exams</span>
       </div>
-         <div class="tab3">
+         <div >
         <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Available exam icon">
         <span>Available exams</span>
       </div>
-         <div class="tab4">
+         <div >
         <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
         <span>View results</span>
       </div>
     </nav>
   </aside>
   <main class="main-body">
-    <section class="dashboard-hero">
+      <div class="card">
+    <div class="profile-details tab1">
+              <img class="profile-img img-form2" src="../data/user-svgrepo-com.svg" alt="Admin profilepicture">
+              <div>Username: Sulaiman6789</div>
+              <div class="profile-action">
+              <button class="edit-profile-button">Edit profile</button>
+              <button class="change-password-button">Change Password</button>
+              <button class="logout-button">Logout</button>
+    </div>
+ </div>
+    <section class="dashboard-hero tab2">
       <div class="hero-copy">
         <p class="eyebrow">Student Dashboard</p>
         <h1>Ready to start your next exam?</h1>
@@ -61,7 +75,7 @@
       </div>
       <img class="hero-image" src="../data/dashboard-4-svgrepo-com.svg" alt="Student dashboard overview illustration">
     </section>
-    <div class="card">
+    <div class="card tab4">
       <div class="page-heading">
         <h1>Available exams</h1>
         <div class="button-row">
@@ -105,7 +119,7 @@
         </table>
       </div>
     </div>
-    <div class="card">
+    <div class="card tab3">
       <div class="page-heading">
         <h1>Start Exam</h1>
       </div>
@@ -133,12 +147,15 @@
         <a class="button-link secondary" href="take-exam.html">Open</a>
       </div>
     </div>
+    <div class="card tab5">
+   <h1>result is not availbe now </h1>
+    </div>
   </main>
   <footer class="footer">
     <div>Available exams: 2</div>
     <div>Registered students: 30</div>
   </footer>
-<script src="..//Student/student-js/student-ui-js.js">
+<script type="module" src="..//Student/student-js/student-ui-js.js">
 
 </script>
 </body>

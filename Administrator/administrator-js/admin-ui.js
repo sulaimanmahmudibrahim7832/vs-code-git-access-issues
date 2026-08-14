@@ -1,11 +1,4 @@
-
-const menu = document.querySelectorAll(".menu div");
-const user_info = document.querySelector(".profile-card");
-const dashboard = document.querySelector(".dashboard-hero");
-const create_exam = document.querySelector(".exam-card");
-const set_schedule = document.querySelector(".schedule-card");
-const view_result = document.querySelector(".result-card");
-const recent_activities = document.querySelector(".recent-activities-card");
+import { menu, tab1, tab2, tab3, tab4, tab5,render_pageUi } from  "../utility/utility.js";
 
 
 // buttons category
@@ -87,34 +80,8 @@ const profileImg2 = document.querySelector(".img-form2");
    profileImg.src = file;
    profileImg2.src = file;
 });
-function controlUI() {
-  const cards = [user_info, dashboard, create_exam, set_schedule, view_result, recent_activities];
-  let initial_ = menu[0].classList.add("active-button");
-  let initial_card = user_info.style;
 
-  cards.forEach(card => {
-    card.style.display = "none";
-  });
-
-  menu.forEach(tab => {
-    tab.addEventListener("click", () => {
-      menu.forEach(btn => {
-        btn.classList.remove("active-button");
-      });
-      tab.classList.add("active-button");
-      cards.forEach(card => {
-        card.style.display = "none";
-      });
-      for (let i = 0; i < menu.length; i++) {
-        if (menu[i].classList.contains("active-button")) {
-          cards[i].style.display = "grid";
-        }
- 
-      }
-    });
-  });
-}
-controlUI();
+render_pageUi(menu, tab1, tab2, tab3, tab4, tab5);
 
 
 
