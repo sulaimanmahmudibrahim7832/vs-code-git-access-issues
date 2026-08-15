@@ -30,27 +30,33 @@
   </header>
   <aside class="left-nav">
     <div class="user-info">
-      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Admin avatar">
-      <span>Admin</span>
+
+      <span>Exam info</span>
     </div>
     <nav class="sidebar-nav" aria-label="Admin menu">
-      <a class="sidebar-item active" href="createExam.html">
-        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
-        <span>Create exam</span>
-      </a>
-      <a class="sidebar-item" href="schedule.html">
-        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
-        <span>Schedules</span>
-      </a>
-      <a class="sidebar-item" href="../Result/result.html">
-        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
-        <span>Results</span>
-      </a>
+       <div>
+      
+        <span> Exam preview </span>
+       </div>
+       <div>
+        
+        <span>   Courses selection</span>
+       </div>
+       <div>
+            
+        <span>Questions info</span>
+       </div>
+       <div>
+        <span>Exam summary</span>
+       </div>
     </nav>
   </aside>
   <main class="main-body">
+     <div class="card">
+     <h1>Create Exam</h1>
+     </div>
     <div class="page-heading">
-      <h1>Create Exam</h1>
+      
       <div class="card">
         <h2> Exam preview </h2>
          <div class="prview-contents table-responsive" >
@@ -76,15 +82,15 @@
           </table>
           <div class="button-row">
             <button class="secondary">View</button>
+             <button>Save Draft</button>
+             <button class="secondary">Edit</button>
           </div>
          </div>
-      </div>
-      <div class="button-row">
-        <button>Save Draft</button>
       </div>
     </div>
     <div class="card">
       <div class="exam-template">
+        <h1>Exam information</h1>
         <label>Exam title<input type="text" placeholder="Enter exam title"></label>
         <label>Duration
           <div class="time-inputs">
@@ -106,9 +112,10 @@
     </div>
     <div class="card">
       <div class="page-heading">
-        <h1>Course selection</h1>
+        <h1>Courses selection</h1>
       </div>
       <div class="course-contents table-responsive">
+        <h2>Courses Preview </h2>
         <table>
           <thead>
             <tr>
@@ -135,6 +142,7 @@
             </tr>
           </tbody>
         </table>
+        <button class="secondary"> Edit </button>
       </div>
       <div class="create-schedule">
         <label>Course title<input type="text" placeholder="New course title"></label>
@@ -143,7 +151,7 @@
     </div>
     <div class="card">
       <div class="page-heading">
-        <h1>Questions</h1>
+        <h1>Questions information</h1>
       </div>
       <div class="questions-template">
         <select>
@@ -152,6 +160,7 @@
           <option>Chemistry</option>
           <option>Physics</option>
         </select>
+        <h2>Questions preview</h2>
         <div class="muted">Course: Mathematics</div>
         <p>Q1. The product of 2² and 3² is?</p>
         <div>
@@ -160,6 +169,7 @@
           <span>C) 78</span><br>
           <span>D) 100</span>
         </div>
+        <button class="secondary"> delete</button> <button class="secondary">Edit</button>
       </div>
       <div class="questions">
         <label>Question<input type="text" placeholder="Question text"></label>
@@ -178,6 +188,7 @@
     </div>
     <div class="card">
       <div class="plan-publish  table-responsive">
+        <h1>Exam summary </h1>
          <table>
           <thead>
             <tr>
@@ -211,8 +222,6 @@
     <div>Published exams: 2</div>
     <div>Total students: 30</div>
   </footer>
-  <script src="../Administrator/utility/utility.js">
 
-  </script>
 </body>
 </html>
