@@ -30,29 +30,80 @@
   </header>
   <aside class="left-nav">
     <div class="user-info">
-      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Admin avatar">
-      <span>Admin</span>
+     
+      <span>Schedule</span>
     </div>
     <nav class="sidebar-nav" aria-label="Schedule menu">
       <div>
-        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
-        <span>Dashboard</span>
+      
+        <span>Upcoming schedule</span>
       </div>
       <div>
-        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
-        <span>Set schedule</span>
+       
+        <span>Published</span>
       </div>
       <div>
-        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
-        <span>View result</span>
+
+        <span>Schedule summary </span>
       </div>
     </nav>
   </aside>
   <main class="main-body">
-    <div class="page-heading">
-      <h1>Exam Schedule</h1>
-      <div class="button-row">
-        <button class="secondary">Publish schedule</button>
+    <h1>Exam Schedule</h1>
+    
+    
+      <div class="card">
+        <div class="page-heading">
+  <h1>Published Exams (session 1) </h1>
+    <label>Title : <span>First Monthly Test </span> </label>
+  <label>Total Duration : <span>3 hours, 45 minutes </span> </label>
+                 <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Subjects</th>
+              <th>Duration</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Friday</td>
+              <td>01/08/2026</td>
+              <td>Physics</td>
+              <td>1 hour</td>
+              <td>9:00am</td>
+                </tr>
+            <tr>
+              <td>Friday</td>
+              <td>01/08/2026</td>
+              <td>Physics</td>
+              <td>1 hour</td>
+              <td>10:00am</td>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>02/08/2026</td>
+              <td>Mathematics</td>
+              <td>1 hour</td>
+              <td>10:00am</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>14/08/2026</td>
+              <td>English</td>
+              <td>45 minutes</td>
+              <td>8:15am</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-row"> 
+         <button class="secondary" >
+          Edit 
+         </button>
+         <button class="secondary">Publish</button>
+        </div>
       </div>
     </div>
     <div class="card">
@@ -107,6 +158,7 @@
          <button class="secondary" >
           Edit 
          </button>
+         <button class="secondary">Publish</button>
         </div>
       </div>
     </div>
@@ -145,11 +197,12 @@
              </table>
           </div>
            <div class="button-row">
-          <button class="secondary">Add to Upcoming events</button>
+          <button class="secondary">Add upcoming schedule</button>
           <button class="secondary"> Edit </button>
            </div>
         </div>
       <div class="create-schedule">
+        <h2>Edit view </h2>
         <label>Day<select>
           <option>Monday</option>
           <option>Tuesday</option>
