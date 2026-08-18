@@ -30,26 +30,26 @@
   </header>
   <aside class="left-nav">
     <div class="user-info">
-      <img class="user-img" src="../data/user-svgrepo-com.svg" alt="Admin avatar">
-      <span>Admin</span>
+
+      <span>Latest Summary</span>
     </div>
     <nav class="sidebar-nav" aria-label="Results menu">
-      <a class="sidebar-item" href="../Administrator/admin.html">
-        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Dashboard icon">
-        <span>Dashboard</span>
-      </a>
-      <a class="sidebar-item" href="../Administrator/createExam.html">
-        <img class="exam-img" src="../data/exam-svgrepo-com (1).svg" alt="Create exam icon">
-        <span>Create exam</span>
-      </a>
-      <a class="sidebar-item" href="../Administrator/schedule.html">
-        <img class="schedule-img" src="../data/schedule-svgrepo-com.svg" alt="Schedule icon">
-        <span>Schedules</span>
-      </a>
-      <a class="sidebar-item active" href="result.html">
-        <img class="schedule-img" src="../data/result-svgrepo-com.svg" alt="Results icon">
-        <span>Results</span>
-      </a>
+      <div>
+
+        <span>indvidual view </span>
+      </div>
+      <div>
+     
+        <span>awaiting records</span>
+      </div>
+      <div>
+       
+        <span>absent records</span>
+      </div>
+      <div>
+        
+        <span>Result  summary </span>
+      </div>
     </nav>
   </aside>
   <main class="main-body">
@@ -63,6 +63,9 @@
     <div class="card">
       <div class="page-heading">
         <h1>Latest result summary</h1>
+        <h1>Exam title : first Monthly Test </h1>
+        <span> completed Date : 18/08/2026</span>
+        <span>session Date : start from : 15/08/2026 to: 18/18/2026 </span>
       </div>
       <div class="table-responsive">
         <table>
@@ -97,7 +100,12 @@
 
     <div class="card">
       <div class="page-heading">
+        
         <h1>Individual result preview</h1>
+        <h2>Exam Title : first Monthly Test </h2>
+        <span> completed Date : 18/08/2026</span>
+        <span>Participated : All exams</span>
+        <span>Absent : 0 </span>
       </div>
       <div class="student-info">
         <p><strong>Name:</strong> Sulaiman Mahmud Ibrahim</p>
@@ -134,6 +142,129 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+    <div class="card">
+   <div>
+    <h1>Awaiting Records </h1>
+   </div>
+   <div>
+    <h3>Recent Exam : <span>Today </span></h3>
+    <h4>Title: first Monthly Test </h4>
+    <h4>Participated student : 40 </h4>
+    <h4>Result status : pending </h4>
+    <h5>2 exams completed out of 4 exams </h5>
+   </div>
+    </div>
+    <div class="card">
+    <div class="absent">
+      <h3>Absent records </h3>
+      <table class="table-responsive">
+        <thead>
+          <tr>
+            <th>
+              Name:
+            </th>
+            <th>Metric </th>
+            <th>
+              Absents 
+            </th>
+            <th>Subjects </th>
+          </tr>
+        </thead>
+        <body>
+          <tr>
+            <td>
+              Abba Umar Lawal 
+            </td>
+            <td>
+              GSCKN/21/G0012
+            </td>
+            <td>
+              1
+            </td>
+            <td>
+              Chemistry 
+            </td>
+          </tr>
+           <tr>
+            <td>
+              Halifu Nuhu Abba 
+            </td>
+            <td>
+              DSCKN/20/G9012
+            </td>
+            <td>
+              2
+            </td>
+            <td>
+              Geogrphy, fisheries 
+            </td>
+          </tr>
+           <tr>
+            <td>
+              Bala Kamis Bala 
+            </td>
+            <td>
+              GSCKN/31/G1012
+            </td>
+            <td>
+              2
+            </td>
+            <td>
+              Chemistry,English 
+            </td>
+          </tr>
+        </body>
+      </table>
+    </div>
+    </div>
+    <div class="card">
+      <div class="result-summary">
+       
+       <div>
+        <h2>Result Summary </h2>
+       </div>
+            <table class="responsive">
+              <thead>
+                <tr>
+                  <th>
+                    Exam title 
+                  </th>
+                  <th>
+                    start date 
+                  </th>
+                  <th>
+                    Exam end date 
+                  </th>
+                  <th>
+                    result status 
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>First term  </td>
+                  <td>12/09/2026</td>
+                  <td>20/09/2026</td>
+                  <td>awaiting</td>
+                </tr>
+                <tr>
+            <td>prelimanry test </td>
+            <td>12/08/2026</td>
+            <td>21/08/2026</td>
+            <td>pending</td>
+          </tr>
+          <tr>
+            <td>First monthly test </td>
+            <td>12/08/2026</td>
+            <td>14/08/2026</td>
+            <td>ready</td>
+          </tr>
+              </tbody>
+            </table>
+      
+      
       </div>
     </div>
   </main>
