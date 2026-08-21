@@ -26,7 +26,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+.tabContent{
+  display:none;
+}
+.tabContentActive{
+  display: grid;
+}
 html {
   scroll-behavior: smooth;
 }

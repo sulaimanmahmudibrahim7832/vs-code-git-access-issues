@@ -1,65 +1,46 @@
-const menu = document.querySelectorAll(".menu div");
-const tab1 = document.querySelector(".tab1");
-const tab2 = document.querySelector(".tab2");
-const tab3 = document.querySelector(".tab3");
-const tab4 = document.querySelector(".tab4");
-const tab5 = document.querySelector(".tab5");
+export { tabsManager};
+const tabs = document.querySelectorAll(".menu div");
+const tabContents = document.querySelectorAll(".tab");
 
-export { render_pageUi,menu,tab1,tab2,tab3,tab4,tab5}
-function render_pageUi(menu, tab1, tab2, tab3, tab4, tab5) {
-  const cards = [tab1,tab2,tab3,tab4,tab5];
-  let initial_ = menu[0].classList.add("active-button");
-
-  cards.forEach(card => {
-    card.style.display = "none";
-  });
-
-  cards[0].style.display = "grid";
-  menu.forEach(tab => {
-    // nav control function
-    tab.addEventListener("click", () => {
-      menu.forEach(btn => {
-        btn.classList.remove("active-button");
+    class tabsManager{
+    tabs;
+    tabContent;
+    constructor(tabs,tabContent){
+      this.tabs = tabs;
+      this.tabContent = tabContent
+    };
+    renderTabs(tabs,tabContent){
+         tabs[0].classList.add("active-button");
+          tabContent.forEach( content =>{
+      content.classList.add("tabContent");
+           }
+        );
+   tabContent[0].classList.remove("tabContent");
+   tabs.forEach(tab => {
+      tab.addEventListener("click",()=>{
+       tabs.forEach(btn=>{
+         btn.classList.remove("active-button");
+       });
+       tab.classList.add("active-button");
+        this.renderTabContent(tabs,tabContent);
       });
-      tab.classList.add("active-button");
-      // card renderation function 
-    
-      cards.forEach(card => {
-        card.style.display = "none";
-      });
-      for (let i = 0; i < menu.length; i++) {
-        if (menu[i].classList.contains("active-button")) {
-          cards[i].style.display = "grid";
-        }
- 
-      }
-    });
-  });
-}
+   });
+    };
+    renderTabContent(tabs,tabContent){
+         tabContent.forEach(content=>{
+             content.classList.add("tabContent")
+              });
+            for(let i = 0; i < tabs.length;i++){
+            if (tabs[i].classList.contains("active-button")){
+              tabContent[i].classList.remove("tabContent");
+            }
+          }
+    }
+    }
 
+let tManager = new tabsManager;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+tManager.renderTabs(tabs, tabContents);
 
 
 

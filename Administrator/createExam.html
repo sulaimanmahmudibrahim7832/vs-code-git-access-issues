@@ -28,7 +28,7 @@
       <div>Exam builder</div>
     </div>
   </header>
-  <aside class="left-nav">
+  <aside class="left-nav menu">
     <div class="user-info">
 
       <span>Exam info</span>
@@ -52,12 +52,33 @@
     </nav>
   </aside>
   <main class="main-body">
-     <div class="card">
+     <div class="card ">
      <h1>Create Exam</h1>
      </div>
     <div class="page-heading">
-      
-      <div class="card">
+            <div class="card tab">
+        <div class="exam-template">
+          <h1>Exam information</h1>
+          <label>Exam title<input type="text" placeholder="Enter exam title"></label>
+          <label>Duration
+            <div class="time-inputs">
+                <select class="h-select">
+                </select>
+                 <select class="m-select">
+                </select>
+                 <select class="s-select">
+                </select>
+             </div>
+            <!--<input type="text" placeholder="e.g. 90 minutes">-->
+          </label>
+          <label>Total questions<input type="number" placeholder="Number of questions"></label>
+        </div>
+        <div class="button-row">
+          <button class="secondary">Preview</button>
+          <button>Save exam</button>
+        </div>
+      </div>
+      <div class="card tab">
         <h2> Exam preview </h2>
          <div class="prview-contents table-responsive" >
           <table>
@@ -88,29 +109,7 @@
          </div>
       </div>
     </div>
-    <div class="card">
-      <div class="exam-template">
-        <h1>Exam information</h1>
-        <label>Exam title<input type="text" placeholder="Enter exam title"></label>
-        <label>Duration
-          <div class="time-inputs">
-              <select class="h-select">
-              </select>
-               <select class="m-select">
-              </select>
-               <select class="s-select">
-              </select>
-           </div>
-          <!--<input type="text" placeholder="e.g. 90 minutes">-->
-        </label>
-        <label>Total questions<input type="number" placeholder="Number of questions"></label>
-      </div>
-      <div class="button-row">
-        <button class="secondary">Preview</button>
-        <button>Save exam</button>
-      </div>
-    </div>
-    <div class="card">
+    <div class="card tab">
       <div class="page-heading">
         <h1>Courses selection</h1>
       </div>
@@ -149,7 +148,7 @@
         <button>Add course</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card tab">
       <div class="page-heading">
         <h1>Questions information</h1>
       </div>
@@ -186,7 +185,7 @@
         <button>Add question</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card tab">
       <div class="plan-publish  table-responsive">
         <h1>Exam summary </h1>
          <table>
@@ -222,6 +221,9 @@
     <div>Published exams: 2</div>
     <div>Total students: 30</div>
   </footer>
+<script type="module" src="../Administrator/utility/utility.js">
 
+
+</script>
 </body>
 </html>

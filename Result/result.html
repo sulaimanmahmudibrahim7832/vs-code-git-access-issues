@@ -28,7 +28,7 @@
       <div>Reviewed results</div>
     </div>
   </header>
-  <aside class="left-nav">
+  <aside class="left-nav menu">
     <div class="user-info">
 
       <span>Latest Summary</span>
@@ -60,45 +60,47 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card tab">
       <div class="page-heading">
         <h1>Latest result summary</h1>
         <h1>Exam title : first Monthly Test </h1>
         <span> completed Date : 18/08/2026</span>
         <span>session Date : start from : 15/08/2026 to: 18/18/2026 </span>
+           </div>
+         <div class="table-responsive ">
+           <table>
+             <thead>
+               <tr>
+                 <th>S/N</th>
+                 <th>Name</th>
+                 <th>Matric Number</th>
+                 <th>Total</th>
+                 <th>Action</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>1</td>
+                 <td>Abbas Gambo Lawal</td>
+                 <td>DSK/30</td>
+                 <td>250</td>
+                 <td><button>View</button></td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>Faiz Tijani</td>
+                 <td>DSK/32</td>
+                 <td>243</td>
+                 <td><button>View</button></td>
+               </tr>
+             </tbody>
+           </table>
+        </div>
+   </div>
       </div>
-      <div class="table-responsive">
-        <table>
-          <thead>
-            <tr>
-              <th>S/N</th>
-              <th>Name</th>
-              <th>Matric Number</th>
-              <th>Total</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Abbas Gambo Lawal</td>
-              <td>DSK/30</td>
-              <td>250</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Faiz Tijani</td>
-              <td>DSK/32</td>
-              <td>243</td>
-              <td><button>View</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <div class="card">
+
+    <div class="card tab">
       <div class="page-heading">
         
         <h1>Individual result preview</h1>
@@ -144,7 +146,7 @@
         </table>
       </div>
     </div>
-    <div class="card">
+    <div class="card tab">
    <div>
     <h1>Awaiting Records </h1>
    </div>
@@ -156,7 +158,7 @@
     <h5>2 exams completed out of 4 exams </h5>
    </div>
     </div>
-    <div class="card">
+    <div class="card tab">
     <div class="absent">
       <h3>Absent records </h3>
       <table class="table-responsive">
@@ -219,7 +221,7 @@
       </table>
     </div>
     </div>
-    <div class="card">
+    <div class="card tab">
       <div class="result-summary">
        
        <div>
@@ -273,5 +275,8 @@
     <div>Total students: 120</div>
     <div>Average score: 72%</div>
   </footer>
+  <script type="module" src="../Administrator/utility/utility.js">
+    
+  </script>
 </body>
 </html>

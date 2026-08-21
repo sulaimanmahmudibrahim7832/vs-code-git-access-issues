@@ -1,5 +1,8 @@
-import { menu, tab1, tab2, tab3, tab4, tab5,render_pageUi } from  "../utility/utility.js";
-
+import { tabsManager } from "..//utility/utility.js";
+const tabs = document.querySelectorAll(".menu div");
+const tabContent = document.querySelectorAll(".tab")
+let TabManager = new tabsManager(tabs, tabContent);
+TabManager.renderTabs(tabs, tabContent);
 
 // buttons category
 const editProfBtn = document.querySelector(".edit-profile-button");
@@ -13,6 +16,7 @@ const paswBack = document.querySelector(".password-back")
 
 //console.log(editProfBtn, changePsBtn, logOutBtn, nameBtn, nameBack, delAcc, fullNameBack, fullNameSave, paswBack, paswBack);
 // buttons
+
 const profileFrom = document.querySelector(".profile-form");
 const profileCard = document.querySelector(".profile-details");
 const passwordCard = document.querySelector(".password-card");
@@ -71,17 +75,19 @@ function changePSwitch() {
 }
 
 //
+const userImage = document.querySelector(".user-img");
+
 const profileImgInput = document.querySelector(".profile-img-input");
 const profileImg = document.querySelector(".img-form");
 const profileImg2 = document.querySelector(".img-form2");
  profileImgInput.addEventListener("change", e => {
   let files = e.target.files;
-  file = URL.createObjectURL(files[0]);
+ let file = URL.createObjectURL(files[0]);
    profileImg.src = file;
    profileImg2.src = file;
+   userImage.src = file;
 });
 
-render_pageUi(menu, tab1, tab2, tab3, tab4, tab5);
 
 
 
