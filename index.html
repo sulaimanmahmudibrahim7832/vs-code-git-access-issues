@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Administrator/administrator-css/dashboard-shared.css">
+  <link rel="stylesheet" href="Administrator/administrator-css/admin-dashboard.css">
+  <title>home page</title>
+</head>
+<body>
+    <header class="header-nav"> 
+    
+   <div class="system-brand">
+   <img class="logo-img" src="../data/Arewa-cbt.png" alt="Arewa CBT logo">
+    <div>
+    Arewa CBT 
+    </div>
+   </div>
+   <div class="search-bar"> 
+    <input class="search-input" type="search" placeholder="Search exams, schedules, or results" 
+aria-label="Search dashboard"> <button class="search-button">Search</button> </div>
+    
+    
+  <div class="dashboard-title">
+       <div>
+          Trial 
+       </div>
+       <div>CBT  </div>
+  </div>    <div class="event">
+    <div>
+     Feedback
+    </div>
+   <div>
+     <button class="secondary feedback">
+      Send Messages 
+     </button>
+     <span class="feedback-content">
+
+     </span>
+   </div> 
+  </div>
+</header>
+<main cass="main-body">
+  <h1> User Prototype and feedback page  </h1>
+  <div class="content">
+    <div class="card tab">
+      <div class="card">
+       
+       <a href="./Authentication/login.html" > <button>Login</button></a>
+       <a href="./Authentication/signup.html" > <button>Create Account</button></a>
+       
+      </div>
+      <div class="card">
+        <a href="./Administrator/admin.html"><button class="secondary">Admin</button></a>
+                <a href="./Student/student.html"><button class="secondary">Student</button></a>
+      </div>
+      <div class="card">
+       <a href="./Administrator/createExam.html"><button class="secondary">Create Exam</button></a>
+          <a href="./Administrator/schedule.html"><button class="secondary">create Schedule </button></a>
+     </div>
+      <div class="card">
+  <a href="./Student/take-exam.html"><button class="secondary">Take Exam</button></a>
+     <a href="./Student/E-Available.html"><button class="secondary">Available Exam </button></a>
+</div>
+ <div class="card">
+  <a href="./quiz.html"><button class="secondary">Start Exam</button></a>
+     <a href="./Administrator/schedule.html"><button class="secondary">create Schedule </button></a>
+</div>
+
+    </div>
+  </div>
+</main>
+ <script>
+  const h1 = document.querySelector("h1");
+  h1.innerText = " User Prototype and feedback page ".toUpperCase();
+  const msgButton = document.querySelector(".feedback");
+  const msgContent = document.querySelector(".feedback-content");
+msgButton.addEventListener("click",()=>{
+  msgContent.innerHTML = `
+   <label> Contact Us via WhatsApp : 09076776898 or 09035924580</label>
+  `;
+});
+ </script>
+</body>
+</html>
