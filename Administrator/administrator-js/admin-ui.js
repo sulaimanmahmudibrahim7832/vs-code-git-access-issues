@@ -5,6 +5,12 @@ let TabManager = new tabsManager(tabs, tabContent);
 TabManager.renderTabs(tabs, tabContent);
 
 // buttons category
+const deckCard = document.querySelector(".deck");
+const tab = document.querySelector(".menu");
+deckCard.addEventListener("click", () => {
+    tab.style.display = "none";
+  
+});
 const editProfBtn = document.querySelector(".edit-profile-button");
 const changePsBtn = document.querySelector(".change-password-button");
 const logOutBtn = document.querySelector(".logout-button");

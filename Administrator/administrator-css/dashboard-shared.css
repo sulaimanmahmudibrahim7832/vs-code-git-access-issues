@@ -25,12 +25,31 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+
 }
 .tabContent{
   display:none;
 }
 .tabContentActive{
   display: grid;
+}
+.deck{
+  position:absolute;
+  right:1px;
+  background-color: #db1024;
+  padding-top:0;
+  padding:2px;
+  font-weight:bold;
+  border:solid 1px gray;
+  cursor: pointer;
+}
+.deck:hover{
+  opacity:0.78;
+  background-color: #c3091caa;
+  z-index:1;
+}
+.deck:active{
+  opacity:0.55;
 }
 html {
   scroll-behavior: smooth;
